@@ -13,7 +13,7 @@
             <Setter Property="Foreground" Value="BlanchedAlmond"/>
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="SnapsToDevicePixels" Value="True"/>
-            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontSize" Value="9"/>
             <Setter Property="Effect">
                 <Setter.Value>
                     <DropShadowEffect
@@ -33,7 +33,7 @@
         <Style TargetType="{x:Type RadioButton}">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="SnapsToDevicePixels" Value="True"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="8"/>
             <Setter Property="Background">
                 <Setter.Value>
                     <SolidColorBrush Color="Red" Opacity="0.8" />
@@ -99,7 +99,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/> <!--15-->
             </Grid.RowDefinitions>
             
             <Grid.Background>
@@ -220,6 +220,28 @@
                                     Visibility="Collapsed"
                                     Checked="click40"/>
                     </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="Totals" Grid.Column="1" Grid.Row="15">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total IPC for Germany = " FontSize="18"/>
+                    <TextBlock Text="{Binding Path=GermanyTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total IPC for Japan = " FontSize="18"/>
+                    <TextBlock Text="{Binding Path=JapanTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total IPC for the USA = " FontSize="18"/>
+                    <TextBlock Text="{Binding Path=USATotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total IPC for the UK = " FontSize="18"/>
+                    <TextBlock Text="{Binding Path=UKTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Total IPC for the USSR = " FontSize="18"/>
+                    <TextBlock Text="{Binding Path=USSRTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
