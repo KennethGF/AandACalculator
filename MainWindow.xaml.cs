@@ -35,16 +35,18 @@ namespace AxisAndAlliesCalculator
         {
             get
             {
+                LoadMapData();
                 var gList = _gameDataList.Where(s => s.OWNER == "Germany").Select(s => s.IPC).ToList().Sum();
-                return 24; //gList;
+                return gList;
             }
+
         }
         public int JapanTotal
         {
             get
             {
                 var jList = _gameDataList.Where(s => s.OWNER == "Japan").Select(s => s.IPC).ToList().Sum();
-                return 25; // jList;
+                return jList;
             }
         }
         public int USATotal
@@ -52,7 +54,7 @@ namespace AxisAndAlliesCalculator
             get
             {
                 var usList = _gameDataList.Where(s => s.OWNER == "USA").Select(s => s.IPC).ToList().Sum();
-                return 26; // usList;
+                return usList;
             }
         }
         public int UKTotal
@@ -60,7 +62,7 @@ namespace AxisAndAlliesCalculator
             get
             {
                 var ukList = _gameDataList.Where(s => s.OWNER == "UK").Select(s => s.IPC).ToList().Sum();
-                return 27; // ukList;
+                return ukList;
             }
         }
         public int USSRTotal
@@ -68,7 +70,7 @@ namespace AxisAndAlliesCalculator
             get
             {
                 var rusList = _gameDataList.Where(s => s.OWNER == "USSR").Select(s => s.IPC).ToList().Sum();
-                return 18; // rusList;
+                return rusList;
             }
         }
         //public string DisplayedImage
@@ -77,13 +79,14 @@ namespace AxisAndAlliesCalculator
         //}
         public MainWindow()
         {
+
             DataContext = this;
             InitializeComponent();
-
+            LoadMapData();
             //this.DataContext = new SimpleViewModel();
             this.HorizontalAlignment = HorizontalAlignment.Left;
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            LoadMapData();
+            //LoadMapData();
             IsVisibleChanged += OnIsVisibleChanged;      
         }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -468,8 +471,7 @@ namespace AxisAndAlliesCalculator
             //	Germany39.Visibility = Visibility.Visible;	Japan39.Visibility = Visibility.Visible;
 
             GameData gameData40 = new GameData("EasternCanada", 3, "UK", "UK", false);
-            Germany40.Visibility = Visibility.Visible;
-            Japan40.Visibility = Visibility.Visible;
+            Germany40.Visibility = Visibility.Visible; Japan40.Visibility = Visibility.Visible;
 
             GameData gameData41 = new GameData("Egypt", 2, "UK", "UK", false);
             //	Germany41.Visibility = Visibility.Visible;	Japan41.Visibility = Visibility.Visible;
@@ -551,7 +553,6 @@ namespace AxisAndAlliesCalculator
 
             GameData gameData67 = new GameData("SovietFarEast", 1, "USSR", "USSR", false);
             //	Germany67.Visibility = Visibility.Visible;	Japan67.Visibility = Visibility.Visible;
-
 
             _gameDataList.Add(gameData0);
             _gameDataList.Add(gameData1);
