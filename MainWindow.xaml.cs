@@ -35,7 +35,7 @@ namespace AxisAndAlliesCalculator
         {
             get
             {
-                LoadMapData();
+                updateMapData();
                 var gList = _gameDataList.Where(s => s.OWNER == "Germany").Select(s => s.IPC).ToList().Sum();
                 return gList;
             }
@@ -73,20 +73,16 @@ namespace AxisAndAlliesCalculator
                 return rusList;
             }
         }
-        //public string DisplayedImage
-        //{
-        //    get { return @"~\..\Germany.png";}
-        //}
         public MainWindow()
         {
 
             DataContext = this;
             InitializeComponent();
-            LoadMapData();
+
             //this.DataContext = new SimpleViewModel();
             this.HorizontalAlignment = HorizontalAlignment.Left;
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            //LoadMapData();
+            //updateMapData();
             IsVisibleChanged += OnIsVisibleChanged;      
         }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -341,7 +337,7 @@ namespace AxisAndAlliesCalculator
         #endregion
         // ToDO: need a change of ownership icon on the map
 
-        public void LoadMapData()
+        public void updateMapData()
         {
             //################################
             ////populuate gamedate objects for income producing territories and load list of gamedata objects
