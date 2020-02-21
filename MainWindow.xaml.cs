@@ -35,7 +35,7 @@ namespace AxisAndAlliesCalculator
         {
             get
             {
-                updateMapData();
+                 updateMapData();
                 var gList = _gameDataList.Where(s => s.OWNER == "Germany").Select(s => s.IPC).ToList().Sum();
                 return gList;
             }
@@ -79,17 +79,225 @@ namespace AxisAndAlliesCalculator
             DataContext = this;
             InitializeComponent();
 
-            //this.DataContext = new SimpleViewModel();
             this.HorizontalAlignment = HorizontalAlignment.Left;
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             //updateMapData();
             IsVisibleChanged += OnIsVisibleChanged;      
         }
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string propertyName= null)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        ////populuate gamedate objects for income producing territories
+        /// 
+
+        GameData gameData0 = new GameData("Germany", 10, "Germany", "Germany", false);
+        //USA0.Visibility = Visibility.Visible; UK0.Visibility = Visibility.Visible; USSR0.Visibility = Visibility.Visible;
+
+        GameData gameData1 = new GameData("France", 6, "Germany", "Germany", false);
+        // USA1.Visibility = Visibility.Visible; UK1.Visibility = Visibility.Visible; USSR1.Visibility = Visibility.Visible;
+
+        GameData gameData2 = new GameData("NorthWesternEurope", 2, "Germany", "Germany", false);
+        //	USA2.Visibility = Visibility.Visible; UK2.Visibility = Visibility.Visible; USSR2.Visibility = Visibility.Visible;
+
+        GameData gameData3 = new GameData("Norway", 2, "Germany", "Germany", false);
+        //	USA3.Visibility = Visibility.Visible; UK3.Visibility = Visibility.Visible; USSR3.Visibility = Visibility.Visible;
+
+        GameData gameData4 = new GameData("Finland", 1, "Germany", "Germany", false);
+        //	USA4.Visibility = Visibility.Visible;	UK4.Visibility = Visibility.Visible;	 USSR4.Visibility = Visibility.Visible;
+
+        GameData gameData5 = new GameData("BalticStates", 2, "Germany", "Germany", false);
+        //	USA5.Visibility = Visibility.Visible;	UK5.Visibility = Visibility.Visible;	 USSR5.Visibility = Visibility.Visible;
+
+        GameData gameData6 = new GameData("Poland", 2, "Germany", "Germany", false);
+        //	USA6.Visibility = Visibility.Visible;	UK6.Visibility = Visibility.Visible;	 USSR6.Visibility = Visibility.Visible;
+
+        GameData gameData7 = new GameData("BulgariaRomania", 2, "Germany", "Germany", false);
+        //	USA7.Visibility = Visibility.Visible;	UK7.Visibility = Visibility.Visible;	 USSR7.Visibility = Visibility.Visible;
+
+        GameData gameData8 = new GameData("Italy", 3, "Germany", "Germany", false);
+        //	USA8.Visibility = Visibility.Visible;	UK8.Visibility = Visibility.Visible;	 USSR8.Visibility = Visibility.Visible;
+
+        GameData gameData9 = new GameData("SouthernEurope", 2, "Germany", "Germany", false);
+        //	USA9.Visibility = Visibility.Visible;	UK9.Visibility = Visibility.Visible;	 USSR9.Visibility = Visibility.Visible;
+
+        GameData gameData10 = new GameData("Ukraine", 2, "Germany", "Germany", false);
+        //	USA10.Visibility = Visibility.Visible;	UK10.Visibility = Visibility.Visible;	 USSR10.Visibility = Visibility.Visible;
+
+        GameData gameData11 = new GameData("Belorussia", 2, "Germany", "Germany", false);
+        //	USA11.Visibility = Visibility.Visible;	UK11.Visibility = Visibility.Visible;	 USSR11.Visibility = Visibility.Visible;
+
+        GameData gameData12 = new GameData("WestRussia", 2, "Germany", "Germany", false);
+        //	USA12.Visibility = Visibility.Visible;	UK12.Visibility = Visibility.Visible;	 USSR12.Visibility = Visibility.Visible;
+
+        GameData gameData13 = new GameData("Morocco", 1, "Germany", "Germany", false);
+        //	USA13.Visibility = Visibility.Visible;	UK13.Visibility = Visibility.Visible;	 USSR13.Visibility = Visibility.Visible;
+
+        GameData gameData14 = new GameData("Algeria", 1, "Germany", "Germany", false);
+        //	USA14.Visibility = Visibility.Visible;	UK14.Visibility = Visibility.Visible;	 USSR14.Visibility = Visibility.Visible;
+
+        GameData gameData15 = new GameData("Libya", 1, "Germany", "Germany", false);
+        //	USA15.Visibility = Visibility.Visible;	UK15.Visibility = Visibility.Visible;	 USSR15.Visibility = Visibility.Visible;
+
+        GameData gameData16 = new GameData("Japan", 8, "Japan", "Japan", false);
+        //	USA16.Visibility = Visibility.Visible;	UK16.Visibility = Visibility.Visible;	 USSR16.Visibility = Visibility.Visible;
+
+        GameData gameData17 = new GameData("Manchuria", 3, "Japan", "Japan", false);
+        //	USA17.Visibility = Visibility.Visible;	UK17.Visibility = Visibility.Visible;	 USSR17.Visibility = Visibility.Visible;
+
+        GameData gameData18 = new GameData("Kiangsu", 2, "Japan", "Japan", false);
+        //	USA18.Visibility = Visibility.Visible;	UK18.Visibility = Visibility.Visible;	 USSR18.Visibility = Visibility.Visible;
+
+        GameData gameData19 = new GameData("Kwangtung", 2, "Japan", "Japan", false);
+        //	USA19.Visibility = Visibility.Visible;	UK19.Visibility = Visibility.Visible;	 USSR19.Visibility = Visibility.Visible;
+
+        GameData gameData20 = new GameData("FrenchIndoChina", 2, "Japan", "Japan", false);
+        //	USA20.Visibility = Visibility.Visible;	UK20.Visibility = Visibility.Visible;	 USSR20.Visibility = Visibility.Visible;
+
+        GameData gameData21 = new GameData("Malaya", 1, "Japan", "Japan", false);
+        //	USA21.Visibility = Visibility.Visible;	UK21.Visibility = Visibility.Visible;	 USSR21.Visibility = Visibility.Visible;
+
+        GameData gameData22 = new GameData("EastIndies", 4, "Japan", "Japan", false);
+        //	USA22.Visibility = Visibility.Visible;	UK22.Visibility = Visibility.Visible;	 USSR22.Visibility = Visibility.Visible;
+
+        GameData gameData23 = new GameData("Borneo", 4, "Japan", "Japan", false);
+        //	USA23.Visibility = Visibility.Visible;	UK23.Visibility = Visibility.Visible;	 USSR23.Visibility = Visibility.Visible;
+
+        GameData gameData24 = new GameData("NewGuinea", 1, "Japan", "Japan", false);
+        //	USA24.Visibility = Visibility.Visible;	UK24.Visibility = Visibility.Visible;	 USSR24.Visibility = Visibility.Visible;
+
+        GameData gameData25 = new GameData("PhilippineIslands", 3, "Japan", "Japan", false);
+        //	USA25.Visibility = Visibility.Visible;	UK25.Visibility = Visibility.Visible;	 USSR25.Visibility = Visibility.Visible;
+
+
+
+        GameData gameData26 = new GameData("EasternUSA", 12, "USA", "USA", false);
+        //	Germany26.Visibility = Visibility.Visible;	Japan26.Visibility = Visibility.Visible;
+
+        GameData gameData27 = new GameData("CentralUSA", 6, "USA", "USA", false);
+        //	Germany27.Visibility = Visibility.Visible;	Japan27.Visibility = Visibility.Visible;
+
+        GameData gameData28 = new GameData("Alaska", 2, "USA", "USA", false);
+        //	Germany28.Visibility = Visibility.Visible;	Japan28.Visibility = Visibility.Visible;
+
+        GameData gameData29 = new GameData("WesternUSA", 10, "USA", "USA", false);
+        //	Germany29.Visibility = Visibility.Visible;	Japan29.Visibility = Visibility.Visible;
+
+        GameData gameData30 = new GameData("Hawaiian", 1, "USA", "USA", false);
+        //	Germany30.Visibility = Visibility.Visible;	Japan30.Visibility = Visibility.Visible;
+
+        GameData gameData31 = new GameData("Sinkiang", 1, "USA", "USA", false);
+        //	Germany31.Visibility = Visibility.Visible;	Japan31.Visibility = Visibility.Visible;
+
+        GameData gameData32 = new GameData("Yunnan", 1, "USA", "USA", false);
+        //	Germany32.Visibility = Visibility.Visible;	Japan32.Visibility = Visibility.Visible;
+
+        GameData gameData33 = new GameData("Szechwan", 1, "USA", "USA", false);
+        //	Germany33.Visibility = Visibility.Visible;	Japan33.Visibility = Visibility.Visible;
+
+        GameData gameData34 = new GameData("Anhwei", 1, "USA", "USA", false);
+        //	Germany34.Visibility = Visibility.Visible;	Japan34.Visibility = Visibility.Visible;
+
+        GameData gameData35 = new GameData("Mexico", 2, "USA", "USA", false);
+        //	Germany35.Visibility = Visibility.Visible;	Japan35.Visibility = Visibility.Visible;
+
+        GameData gameData36 = new GameData("CentralAmerica", 1, "USA", "USA", false);
+        //	Germany36.Visibility = Visibility.Visible;	Japan36.Visibility = Visibility.Visible;
+
+        GameData gameData37 = new GameData("WestIndies", 1, "USA", "USA", false);
+        //	Germany37.Visibility = Visibility.Visible;	Japan37.Visibility = Visibility.Visible;
+
+        GameData gameData38 = new GameData("Brazil", 3, "USA", "USA", false);
+        //	Germany38.Visibility = Visibility.Visible;	Japan38.Visibility = Visibility.Visible;
+
+        GameData gameData39 = new GameData("UnitedKingdom", 8, "UK", "UK", false);
+        //	Germany39.Visibility = Visibility.Visible;	Japan39.Visibility = Visibility.Visible;
+
+        GameData gameData40 = new GameData("EasternCanada", 3, "UK", "UK", false);
+        //Germany40.Visibility = Visibility.Visible; Japan40.Visibility = Visibility.Visible;
+
+        GameData gameData41 = new GameData("Egypt", 2, "UK", "UK", false);
+        //	Germany41.Visibility = Visibility.Visible;	Japan41.Visibility = Visibility.Visible;
+
+        GameData gameData42 = new GameData("SouthAfrica", 2, "UK", "UK", false);
+        //	Germany42.Visibility = Visibility.Visible;	Japan42.Visibility = Visibility.Visible;
+
+        GameData gameData43 = new GameData("Jordan", 1, "UK", "UK", false);
+        //	Germany43.Visibility = Visibility.Visible;	Japan43.Visibility = Visibility.Visible;
+
+        GameData gameData44 = new GameData("Persia", 1, "UK", "UK", false);
+        //	Germany44.Visibility = Visibility.Visible;	Japan44.Visibility = Visibility.Visible;
+
+        GameData gameData45 = new GameData("India", 3, "UK", "UK", false);
+        //	Germany45.Visibility = Visibility.Visible;	Japan45.Visibility = Visibility.Visible;
+
+        GameData gameData46 = new GameData("Burma", 1, "UK", "UK", false);
+        //	Germany46.Visibility = Visibility.Visible;	Japan46.Visibility = Visibility.Visible;
+
+        GameData gameData47 = new GameData("EasternAustralia", 1, "UK", "UK", false);
+        //	Germany47.Visibility = Visibility.Visible;	Japan47.Visibility = Visibility.Visible;
+
+        GameData gameData48 = new GameData("WesternAustralia", 1, "UK", "UK", false);
+        //	Germany48.Visibility = Visibility.Visible;	Japan48.Visibility = Visibility.Visible;
+
+        GameData gameData49 = new GameData("NewZealand", 1, "UK", "UK", false);
+        //	Germany49.Visibility = Visibility.Visible;	Japan49.Visibility = Visibility.Visible;
+
+        GameData gameData50 = new GameData("NewGuinea", 1, "UK", "UK", false);
+        //	Germany50.Visibility = Visibility.Visible;	Japan50.Visibility = Visibility.Visible;
+
+        GameData gameData51 = new GameData("FrenchWestAfrica", 1, "UK", "UK", false);
+        //	Germany51.Visibility = Visibility.Visible;	Japan51.Visibility = Visibility.Visible;
+
+        GameData gameData52 = new GameData("FrechEquatorialAfrica", 1, "UK", "UK", false);
+        //	Germany52.Visibility = Visibility.Visible;	Japan52.Visibility = Visibility.Visible;
+
+        GameData gameData53 = new GameData("ItalianEastAfrica", 1, "UK", "UK", false);
+        //	Germany53.Visibility = Visibility.Visible;	Japan53.Visibility = Visibility.Visible;
+
+        GameData gameData54 = new GameData("BelgianCongo", 1, "UK", "UK", false);
+        //	Germany54.Visibility = Visibility.Visible;	Japan54.Visibility = Visibility.Visible;
+
+        GameData gameData55 = new GameData("Rhodesia", 1, "UK", "UK", false);
+        //	Germany55.Visibility = Visibility.Visible;	Japan55.Visibility = Visibility.Visible;
+
+        GameData gameData56 = new GameData("FrechMadagascar", 1, "UK", "UK", false);
+        //	Germany56.Visibility = Visibility.Visible;	Japan56.Visibility = Visibility.Visible;
+
+        GameData gameData57 = new GameData("Russia", 8, "USSR", "USSR", false);
+        //	Germany57.Visibility = Visibility.Visible;	Japan57.Visibility = Visibility.Visible;
+
+        GameData gameData58 = new GameData("Karelia", 2, "USSR", "USSR", false);
+        //	Germany58.Visibility = Visibility.Visible;	Japan58.Visibility = Visibility.Visible;
+
+        GameData gameData59 = new GameData("Archangel", 1, "USSR", "USSR", false);
+        //	Germany59.Visibility = Visibility.Visible;	Japan59	Visibility = Visibility.Visible;
+
+        GameData gameData60 = new GameData("Novosibirsk", 1, "USSR", "USSR", false);
+        //	Germany60.Visibility = Visibility.Visible;	Japan60.Visibility = Visibility.Visible;
+
+        GameData gameData61 = new GameData("Caucasus", 4, "USSR", "USSR", false);
+        //	Germany61.Visibility = Visibility.Visible;	Japan61.Visibility = Visibility.Visible;
+
+        GameData gameData62 = new GameData("Kazakh", 2, "USSR", "USSR", false);
+        //	Germany62.Visibility = Visibility.Visible;	Japan62.Visibility = Visibility.Visible;
+
+        GameData gameData63 = new GameData("Vologda", 2, "USSR", "USSR", false);
+        //	Germany63.Visibility = Visibility.Visible;	Japan63.Visibility = Visibility.Visible;
+
+        GameData gameData64 = new GameData("EvenkiNationalOkrug", 1, "USSR", "USSR", false);
+        //	Germany64.Visibility = Visibility.Visible;	Japan64.Visibility = Visibility.Visible;
+
+        GameData gameData65 = new GameData("Yakut", 1, "USSR", "USSR", false);
+        //	Germany65.Visibility = Visibility.Visible;	Japan65.Visibility = Visibility.Visible;
+
+        GameData gameData66 = new GameData("Buryatia", 1, "USSR", "USSR", false);
+        //	Germany66.Visibility = Visibility.Visible;	Japan66.Visibility = Visibility.Visible;
+
+        GameData gameData67 = new GameData("SovietFarEast", 1, "USSR", "USSR", false);
+        //	Germany67.Visibility = Visibility.Visible;	Japan67.Visibility = Visibility.Visible;
 
         void radioButton0_Click(object sender, RoutedEventArgs e)
         {
@@ -222,6 +430,7 @@ namespace AxisAndAlliesCalculator
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
+                //updateMapData();
             }
         }
         private void click40(object sender, RoutedEventArgs e)
@@ -229,6 +438,10 @@ namespace AxisAndAlliesCalculator
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
+                gameData40.OWNER = "Germany";
+                Germany40.Visibility = Visibility.Collapsed; Japan40.Visibility = Visibility.Collapsed;
+                USA40.Visibility = Visibility.Visible; UK40.Visibility = Visibility.Visible; USSR40.Visibility = Visibility.Visible;
+                updateMapData();
                 //OpenFileDialog openFileDialog = new OpenFileDialog();
                 //if (openFileDialog.ShowDialog() == true)
                 //{
@@ -236,9 +449,9 @@ namespace AxisAndAlliesCalculator
                 //    imgDynamic.Source = new BitmapImage(fileUri);
                 //}
 
-                ////Axis(rb);
-                ////int num = Int32.Parse(rb.GroupName);
-                //if (!gameDataList[Int32.Parse(rb.GroupName)].OCCUPIED)
+                //Axis(rb);
+                //int num = Int32.Parse(rb.GroupName);
+                //if (!_gameDataList[Int32.Parse(rb.GroupName)].OCCUPIED)
                 //    Axis(rb);
                 //else
                 //    Allies(rb);
@@ -335,222 +548,11 @@ namespace AxisAndAlliesCalculator
         //    }
         //}
         #endregion
-        // ToDO: need a change of ownership icon on the map
 
-        public void updateMapData()
+        public void updateMapData() //updateMapData()
         {
-            //################################
-            ////populuate gamedate objects for income producing territories and load list of gamedata objects
-            /// load insignias
-            /// 
-
-            GameData gameData0 = new GameData("Germany", 10, "Germany", "Germany", false);
-            USA0.Visibility = Visibility.Visible; UK0.Visibility = Visibility.Visible; USSR0.Visibility = Visibility.Visible;
-
-            GameData gameData1 = new GameData("France", 6, "Germany", "Germany", false);
-            // USA1.Visibility = Visibility.Visible; UK1.Visibility = Visibility.Visible; USSR1.Visibility = Visibility.Visible;
-
-            GameData gameData2 = new GameData("NorthWesternEurope", 2, "Germany", "Germany", false);
-            //	USA2.Visibility = Visibility.Visible; UK2.Visibility = Visibility.Visible; USSR2.Visibility = Visibility.Visible;
-
-            GameData gameData3 = new GameData("Norway", 2, "Germany", "Germany", false);
-            //	USA3.Visibility = Visibility.Visible; UK3.Visibility = Visibility.Visible; USSR3.Visibility = Visibility.Visible;
-
-            GameData gameData4 = new GameData("Finland", 1, "Germany", "Germany", false);
-            //	USA4.Visibility = Visibility.Visible;	UK4.Visibility = Visibility.Visible;	 USSR4.Visibility = Visibility.Visible;
-
-            GameData gameData5 = new GameData("BalticStates", 2, "Germany", "Germany", false);
-            //	USA5.Visibility = Visibility.Visible;	UK5.Visibility = Visibility.Visible;	 USSR5.Visibility = Visibility.Visible;
-
-            GameData gameData6 = new GameData("Poland", 2, "Germany", "Germany", false);
-            //	USA6.Visibility = Visibility.Visible;	UK6.Visibility = Visibility.Visible;	 USSR6.Visibility = Visibility.Visible;
-
-            GameData gameData7 = new GameData("BulgariaRomania", 2, "Germany", "Germany", false);
-            //	USA7.Visibility = Visibility.Visible;	UK7.Visibility = Visibility.Visible;	 USSR7.Visibility = Visibility.Visible;
-
-            GameData gameData8 = new GameData("Italy", 3, "Germany", "Germany", false);
-            //	USA8.Visibility = Visibility.Visible;	UK8.Visibility = Visibility.Visible;	 USSR8.Visibility = Visibility.Visible;
-
-            GameData gameData9 = new GameData("SouthernEurope", 2, "Germany", "Germany", false);
-            //	USA9.Visibility = Visibility.Visible;	UK9.Visibility = Visibility.Visible;	 USSR9.Visibility = Visibility.Visible;
-
-            GameData gameData10 = new GameData("Ukraine", 2, "Germany", "Germany", false);
-            //	USA10.Visibility = Visibility.Visible;	UK10.Visibility = Visibility.Visible;	 USSR10.Visibility = Visibility.Visible;
-
-            GameData gameData11 = new GameData("Belorussia", 2, "Germany", "Germany", false);
-            //	USA11.Visibility = Visibility.Visible;	UK11.Visibility = Visibility.Visible;	 USSR11.Visibility = Visibility.Visible;
-
-            GameData gameData12 = new GameData("WestRussia", 2, "Germany", "Germany", false);
-            //	USA12.Visibility = Visibility.Visible;	UK12.Visibility = Visibility.Visible;	 USSR12.Visibility = Visibility.Visible;
-
-            GameData gameData13 = new GameData("Morocco", 1, "Germany", "Germany", false);
-            //	USA13.Visibility = Visibility.Visible;	UK13.Visibility = Visibility.Visible;	 USSR13.Visibility = Visibility.Visible;
-
-            GameData gameData14 = new GameData("Algeria", 1, "Germany", "Germany", false);
-            //	USA14.Visibility = Visibility.Visible;	UK14.Visibility = Visibility.Visible;	 USSR14.Visibility = Visibility.Visible;
-
-            GameData gameData15 = new GameData("Libya", 1, "Germany", "Germany", false);
-            //	USA15.Visibility = Visibility.Visible;	UK15.Visibility = Visibility.Visible;	 USSR15.Visibility = Visibility.Visible;
-
-            GameData gameData16 = new GameData("Japan", 8, "Japan", "Japan", false);
-            //	USA16.Visibility = Visibility.Visible;	UK16.Visibility = Visibility.Visible;	 USSR16.Visibility = Visibility.Visible;
-
-            GameData gameData17 = new GameData("Manchuria", 3, "Japan", "Japan", false);
-            //	USA17.Visibility = Visibility.Visible;	UK17.Visibility = Visibility.Visible;	 USSR17.Visibility = Visibility.Visible;
-
-            GameData gameData18 = new GameData("Kiangsu", 2, "Japan", "Japan", false);
-            //	USA18.Visibility = Visibility.Visible;	UK18.Visibility = Visibility.Visible;	 USSR18.Visibility = Visibility.Visible;
-
-            GameData gameData19 = new GameData("Kwangtung", 2, "Japan", "Japan", false);
-            //	USA19.Visibility = Visibility.Visible;	UK19.Visibility = Visibility.Visible;	 USSR19.Visibility = Visibility.Visible;
-
-            GameData gameData20 = new GameData("FrenchIndoChina", 2, "Japan", "Japan", false);
-            //	USA20.Visibility = Visibility.Visible;	UK20.Visibility = Visibility.Visible;	 USSR20.Visibility = Visibility.Visible;
-
-            GameData gameData21 = new GameData("Malaya", 1, "Japan", "Japan", false);
-            //	USA21.Visibility = Visibility.Visible;	UK21.Visibility = Visibility.Visible;	 USSR21.Visibility = Visibility.Visible;
-
-            GameData gameData22 = new GameData("EastIndies", 4, "Japan", "Japan", false);
-            //	USA22.Visibility = Visibility.Visible;	UK22.Visibility = Visibility.Visible;	 USSR22.Visibility = Visibility.Visible;
-
-            GameData gameData23 = new GameData("Borneo", 4, "Japan", "Japan", false);
-            //	USA23.Visibility = Visibility.Visible;	UK23.Visibility = Visibility.Visible;	 USSR23.Visibility = Visibility.Visible;
-
-            GameData gameData24 = new GameData("NewGuinea", 1, "Japan", "Japan", false);
-            //	USA24.Visibility = Visibility.Visible;	UK24.Visibility = Visibility.Visible;	 USSR24.Visibility = Visibility.Visible;
-
-            GameData gameData25 = new GameData("PhilippineIslands", 3, "Japan", "Japan", false);
-            //	USA25.Visibility = Visibility.Visible;	UK25.Visibility = Visibility.Visible;	 USSR25.Visibility = Visibility.Visible;
-
-
-
-            GameData gameData26 = new GameData("EasternUSA", 12, "USA", "USA", false);
-            //	Germany26.Visibility = Visibility.Visible;	Japan26.Visibility = Visibility.Visible;
-
-            GameData gameData27 = new GameData("CentralUSA", 6, "USA", "USA", false);
-            //	Germany27.Visibility = Visibility.Visible;	Japan27.Visibility = Visibility.Visible;
-
-            GameData gameData28 = new GameData("Alaska", 2, "USA", "USA", false);
-            //	Germany28.Visibility = Visibility.Visible;	Japan28.Visibility = Visibility.Visible;
-
-            GameData gameData29 = new GameData("WesternUSA", 10, "USA", "USA", false);
-            //	Germany29.Visibility = Visibility.Visible;	Japan29.Visibility = Visibility.Visible;
-
-            GameData gameData30 = new GameData("Hawaiian", 1, "USA", "USA", false);
-            //	Germany30.Visibility = Visibility.Visible;	Japan30.Visibility = Visibility.Visible;
-
-            GameData gameData31 = new GameData("Sinkiang", 1, "USA", "USA", false);
-            //	Germany31.Visibility = Visibility.Visible;	Japan31.Visibility = Visibility.Visible;
-
-            GameData gameData32 = new GameData("Yunnan", 1, "USA", "USA", false);
-            //	Germany32.Visibility = Visibility.Visible;	Japan32.Visibility = Visibility.Visible;
-
-            GameData gameData33 = new GameData("Szechwan", 1, "USA", "USA", false);
-            //	Germany33.Visibility = Visibility.Visible;	Japan33.Visibility = Visibility.Visible;
-
-            GameData gameData34 = new GameData("Anhwei", 1, "USA", "USA", false);
-            //	Germany34.Visibility = Visibility.Visible;	Japan34.Visibility = Visibility.Visible;
-
-            GameData gameData35 = new GameData("Mexico", 2, "USA", "USA", false);
-            //	Germany35.Visibility = Visibility.Visible;	Japan35.Visibility = Visibility.Visible;
-
-            GameData gameData36 = new GameData("CentralAmerica", 1, "USA", "USA", false);
-            //	Germany36.Visibility = Visibility.Visible;	Japan36.Visibility = Visibility.Visible;
-
-            GameData gameData37 = new GameData("WestIndies", 1, "USA", "USA", false);
-            //	Germany37.Visibility = Visibility.Visible;	Japan37.Visibility = Visibility.Visible;
-
-            GameData gameData38 = new GameData("Brazil", 3, "USA", "USA", false);
-            //	Germany38.Visibility = Visibility.Visible;	Japan38.Visibility = Visibility.Visible;
-
-            GameData gameData39 = new GameData("UnitedKingdom", 8, "UK", "UK", false);
-            //	Germany39.Visibility = Visibility.Visible;	Japan39.Visibility = Visibility.Visible;
-
-            GameData gameData40 = new GameData("EasternCanada", 3, "UK", "UK", false);
-            Germany40.Visibility = Visibility.Visible; Japan40.Visibility = Visibility.Visible;
-
-            GameData gameData41 = new GameData("Egypt", 2, "UK", "UK", false);
-            //	Germany41.Visibility = Visibility.Visible;	Japan41.Visibility = Visibility.Visible;
-
-            GameData gameData42 = new GameData("SouthAfrica", 2, "UK", "UK", false);
-            //	Germany42.Visibility = Visibility.Visible;	Japan42.Visibility = Visibility.Visible;
-
-            GameData gameData43 = new GameData("Jordan", 1, "UK", "UK", false);
-            //	Germany43.Visibility = Visibility.Visible;	Japan43.Visibility = Visibility.Visible;
-
-            GameData gameData44 = new GameData("Persia", 1, "UK", "UK", false);
-            //	Germany44.Visibility = Visibility.Visible;	Japan44.Visibility = Visibility.Visible;
-
-            GameData gameData45 = new GameData("India", 3, "UK", "UK", false);
-            //	Germany45.Visibility = Visibility.Visible;	Japan45.Visibility = Visibility.Visible;
-
-            GameData gameData46 = new GameData("Burma", 1, "UK", "UK", false);
-            //	Germany46.Visibility = Visibility.Visible;	Japan46.Visibility = Visibility.Visible;
-
-            GameData gameData47 = new GameData("EasternAustralia", 1, "UK", "UK", false);
-            //	Germany47.Visibility = Visibility.Visible;	Japan47.Visibility = Visibility.Visible;
-
-            GameData gameData48 = new GameData("WesternAustralia", 1, "UK", "UK", false);
-            //	Germany48.Visibility = Visibility.Visible;	Japan48.Visibility = Visibility.Visible;
-
-            GameData gameData49 = new GameData("NewZealand", 1, "UK", "UK", false);
-            //	Germany49.Visibility = Visibility.Visible;	Japan49.Visibility = Visibility.Visible;
-
-            GameData gameData50 = new GameData("NewGuinea", 1, "UK", "UK", false);
-            //	Germany50.Visibility = Visibility.Visible;	Japan50.Visibility = Visibility.Visible;
-
-            GameData gameData51 = new GameData("FrenchWestAfrica", 1, "UK", "UK", false);
-            //	Germany51.Visibility = Visibility.Visible;	Japan51.Visibility = Visibility.Visible;
-
-            GameData gameData52 = new GameData("FrechEquatorialAfrica", 1, "UK", "UK", false);
-            //	Germany52.Visibility = Visibility.Visible;	Japan52.Visibility = Visibility.Visible;
-
-            GameData gameData53 = new GameData("ItalianEastAfrica", 1, "UK", "UK", false);
-            //	Germany53.Visibility = Visibility.Visible;	Japan53.Visibility = Visibility.Visible;
-
-            GameData gameData54 = new GameData("BelgianCongo", 1, "UK", "UK", false);
-            //	Germany54.Visibility = Visibility.Visible;	Japan54.Visibility = Visibility.Visible;
-
-            GameData gameData55 = new GameData("Rhodesia", 1, "UK", "UK", false);
-            //	Germany55.Visibility = Visibility.Visible;	Japan55.Visibility = Visibility.Visible;
-
-            GameData gameData56 = new GameData("FrechMadagascar", 1, "UK", "UK", false);
-            //	Germany56.Visibility = Visibility.Visible;	Japan56.Visibility = Visibility.Visible;
-
-            GameData gameData57 = new GameData("Russia", 8, "USSR", "USSR", false);
-            //	Germany57.Visibility = Visibility.Visible;	Japan57.Visibility = Visibility.Visible;
-
-            GameData gameData58 = new GameData("Karelia", 2, "USSR", "USSR", false);
-            //	Germany58.Visibility = Visibility.Visible;	Japan58.Visibility = Visibility.Visible;
-
-            GameData gameData59 = new GameData("Archangel", 1, "USSR", "USSR", false);
-            //	Germany59.Visibility = Visibility.Visible;	Japan59	Visibility = Visibility.Visible;
-
-            GameData gameData60 = new GameData("Novosibirsk", 1, "USSR", "USSR", false);
-            //	Germany60.Visibility = Visibility.Visible;	Japan60.Visibility = Visibility.Visible;
-
-            GameData gameData61 = new GameData("Caucasus", 4, "USSR", "USSR", false);
-            //	Germany61.Visibility = Visibility.Visible;	Japan61.Visibility = Visibility.Visible;
-
-            GameData gameData62 = new GameData("Kazakh", 2, "USSR", "USSR", false);
-            //	Germany62.Visibility = Visibility.Visible;	Japan62.Visibility = Visibility.Visible;
-
-            GameData gameData63 = new GameData("Vologda", 2, "USSR", "USSR", false);
-            //	Germany63.Visibility = Visibility.Visible;	Japan63.Visibility = Visibility.Visible;
-
-            GameData gameData64 = new GameData("EvenkiNationalOkrug", 1, "USSR", "USSR", false);
-            //	Germany64.Visibility = Visibility.Visible;	Japan64.Visibility = Visibility.Visible;
-
-            GameData gameData65 = new GameData("Yakut", 1, "USSR", "USSR", false);
-            //	Germany65.Visibility = Visibility.Visible;	Japan65.Visibility = Visibility.Visible;
-
-            GameData gameData66 = new GameData("Buryatia", 1, "USSR", "USSR", false);
-            //	Germany66.Visibility = Visibility.Visible;	Japan66.Visibility = Visibility.Visible;
-
-            GameData gameData67 = new GameData("SovietFarEast", 1, "USSR", "USSR", false);
-            //	Germany67.Visibility = Visibility.Visible;	Japan67.Visibility = Visibility.Visible;
-
             _gameDataList.Add(gameData0);
+            USA0.Visibility = Visibility.Visible; UK0.Visibility = Visibility.Visible; USSR0.Visibility = Visibility.Visible;
             _gameDataList.Add(gameData1);
             _gameDataList.Add(gameData2);
             _gameDataList.Add(gameData3);
@@ -591,6 +593,7 @@ namespace AxisAndAlliesCalculator
             _gameDataList.Add(gameData38);
             _gameDataList.Add(gameData39);
             _gameDataList.Add(gameData40);
+           // Germany40.Visibility = Visibility.Visible; Japan40.Visibility = Visibility.Visible;
             _gameDataList.Add(gameData41);
             _gameDataList.Add(gameData42);
             _gameDataList.Add(gameData43);
@@ -619,43 +622,7 @@ namespace AxisAndAlliesCalculator
             _gameDataList.Add(gameData66);
             _gameDataList.Add(gameData67);
         }
-        //public void GetTotals()
-        //{ 
-        //    foreach (var gameData in _gameDataList)
-        //    {
-        //        switch (gameData.OWNER)
-        //        {
-        //            case "Germany":
-        //                _germanyTotal += gameData.IPC;
-        //                break;
-        //        }
-        //        switch (gameData.OWNER)
-        //        {
-        //            case "Japan":
-        //                _japanTotal += gameData.IPC;
-        //                break;
-        //        }
-        //        switch (gameData.OWNER)
-        //        {
-        //            case "USA":
-        //                _ukTotal += gameData.IPC;
-        //                break;
-        //        }
-        //        switch (gameData.OWNER)
-        //        {
-        //            case "UK":
-        //                _ukTotal += gameData.IPC;
-        //                break;
-        //        }
-        //        switch (gameData.OWNER)
-        //        {
-        //            case "USSR":
-        //                _ussrTotal += gameData.IPC;
-        //                break;
-        //        }
 
-        //    }
-        //}
         //////  Element of Fam
         //public void Axis(RadioButton rb)
         //{
