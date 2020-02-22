@@ -120,7 +120,7 @@
                         <RadioButton
                                     x:Name="Germany0"
                                     VerticalAlignment="Top"                            
-                                    GroupName="0"                                 
+                                    GroupName="Germany"                                 
                                     Content="Germany"
                                     Visibility="Collapsed"
                                     Checked="click0"/>
@@ -129,7 +129,7 @@
                         <RadioButton
                                     VerticalAlignment="Top"
                                     x:Name="Japan0"
-                                    GroupName="0"                          
+                                    GroupName="Germany"                          
                                     Content="Japan" 
                                     Visibility="Collapsed"
                                     Checked="click0"/>
@@ -140,7 +140,7 @@
                         <RadioButton
                                     x:Name="USA0"
                                     VerticalAlignment="Top"
-                                    GroupName="0"
+                                    GroupName="Germany"
                                     Content="USA"
                                     Visibility="Visible"
                                     Checked="click0"/>
@@ -149,7 +149,7 @@
                         <RadioButton
                                     x:Name="UK0"
                                     VerticalAlignment="Top"
-                                    GroupName="0"
+                                    GroupName="Germany"
                                     Visibility="Visible"      
                                     Content="UK"
                                     Checked="click0"/>
@@ -158,7 +158,7 @@
                         <RadioButton
                                     x:Name="USSR0"
                                     VerticalAlignment="Top"
-                                    GroupName="0"
+                                    GroupName="Germany"
                                     Content="USSR"
                                     Visibility="Visible"
                                     Checked="click0"/>
@@ -177,7 +177,7 @@
                         <RadioButton
                                     x:Name="Germany40"
                                     VerticalAlignment="Top"                              
-                                    GroupName="40"                                 
+                                    GroupName="EasternCanada"                                 
                                     Content="Germany"
                                     Visibility="Visible"
                                     Checked="click40"/>
@@ -186,7 +186,7 @@
                         <RadioButton
                                     VerticalAlignment="Top"
                                     x:Name="Japan40"
-                                    GroupName="40"                          
+                                    GroupName="EasternCanada"                          
                                     Content="Japan" 
                                     Visibility="Visible"
                                     Checked="click40"/>
@@ -197,7 +197,7 @@
                         <RadioButton
                                     x:Name="USA40"
                                     VerticalAlignment="Top"
-                                    GroupName="40"
+                                    GroupName="EasternCanada"
                                     Content="USA"
                                     Visibility="Collapsed"
                                     Checked="click40"/>
@@ -206,7 +206,7 @@
                         <RadioButton
                                     x:Name="UK40"
                                     VerticalAlignment="Top"
-                                    GroupName="40"
+                                    GroupName="EasternCanada"
                                     Visibility="Collapsed"      
                                     Content="UK"
                                     Checked="click40"/>
@@ -215,7 +215,7 @@
                         <RadioButton
                                     x:Name="USSR40"
                                     VerticalAlignment="Top"
-                                    GroupName="40"
+                                    GroupName="EasternCanada"
                                     Content="USSR"
                                     Visibility="Collapsed"
                                     Checked="click40"/>

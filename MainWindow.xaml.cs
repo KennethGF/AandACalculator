@@ -9,35 +9,68 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.IO;
 
 namespace AxisAndAlliesCalculator
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    public class GameData
+    {
+        public string TERRITORY;   // data type string defined here
+        public int IPC;
+        public string OWNER;
+        public string ORIGINAL_OWNER;
+        public bool OCCUPIED;
+
+        public GameData(
+        string territory
+        , int ipc
+        , string owner,
+        string original_owner,
+        bool occupied)
+        {
+            TERRITORY = territory;
+            IPC = ipc;
+            OWNER = owner;
+            ORIGINAL_OWNER = original_owner;
+            OCCUPIED = occupied;
+        }
+    }
     public partial class MainWindow : INotifyPropertyChanged
     {
         private List<GameData> _gameDataList = new List<GameData>();
-        //private int _germanyTotal = 0;
-        //private int _japanTotal = 0;
-        //private int _usaTotal = 0;
-        //private int _ukTotal = 0;
-        //private int _ussrTotal = 0;
+        private int _germanyTotal;
+        private int _japanTotal;
+        private int _usaTotal;
+        private int _ukTotal;
+        private int _ussrTotal;
 
-        public int GermanyTotal
+        public List<GameData> GameDataList // THE LIST
         {
             get
             {
-                 updateMapData();
-                var gList = _gameDataList.Where(s => s.OWNER == "Germany").Select(s => s.IPC).ToList().Sum();
-                return gList;
+                return _gameDataList;
+            }
+            set
+            {
+                if (_gameDataList != value)
+                _gameDataList = value;           
+            }
+        }
+        public int GermanyTotal // GERMANY TOTAL 
+        {
+            get
+            {
+                var gList = GameDataList.Where(s => s.OWNER == "Germany").Select(s => s.IPC).ToList().Sum();
+                _germanyTotal = gList;
+                return _germanyTotal;
+            }
+            set
+            { 
+                    _germanyTotal = value;
             }
 
         }
@@ -45,53 +78,81 @@ namespace AxisAndAlliesCalculator
         {
             get
             {
-                var jList = _gameDataList.Where(s => s.OWNER == "Japan").Select(s => s.IPC).ToList().Sum();
-                return jList;
+                var jList = GameDataList.Where(s => s.OWNER == "Japan").Select(s => s.IPC).ToList().Sum();
+                _japanTotal = jList;
+                return _japanTotal;
+            }
+            set
+            {
+                if (_japanTotal != value)
+                    _japanTotal = value;
             }
         }
         public int USATotal
         {
             get
             {
-                var usList = _gameDataList.Where(s => s.OWNER == "USA").Select(s => s.IPC).ToList().Sum();
-                return usList;
+                var usList = GameDataList.Where(s => s.OWNER == "USA").Select(s => s.IPC).ToList().Sum();
+                _usaTotal = usList;
+                return _usaTotal;
+            }
+            set
+            {
+                if (_usaTotal != value)
+                    _usaTotal = value;
             }
         }
         public int UKTotal
         {
             get
             {
-                var ukList = _gameDataList.Where(s => s.OWNER == "UK").Select(s => s.IPC).ToList().Sum();
-                return ukList;
+                var ukList = GameDataList.Where(s => s.OWNER == "UK").Select(s => s.IPC).ToList().Sum();
+                _ukTotal = ukList;
+                return _ukTotal;
+            }
+            set
+            {
+                if (_ukTotal != value)
+                    _ukTotal = value;
             }
         }
         public int USSRTotal
         {
             get
             {
-                var rusList = _gameDataList.Where(s => s.OWNER == "USSR").Select(s => s.IPC).ToList().Sum();
-                return rusList;
+                var rusList = GameDataList.Where(s => s.OWNER == "USSR").Select(s => s.IPC).ToList().Sum();
+                _ussrTotal = rusList;
+                return _ussrTotal;
+            }
+            set
+            {
+                if (_ussrTotal != value)
+                    _ussrTotal = value;
             }
         }
         public MainWindow()
         {
-
             DataContext = this;
+            string _path = "C:/user";
+            _path = Environment.CurrentDirectory;
+            string filename = "\\BasicCountryList.txt";
+
+            LoadBasicCountryListFromHDD(_path + filename); 
+
             InitializeComponent();
 
+            //this.DataContext = new SimpleViewModel();
             this.HorizontalAlignment = HorizontalAlignment.Left;
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            //updateMapData();
+
             IsVisibleChanged += OnIsVisibleChanged;      
         }
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
-        ////populuate gamedate objects for income producing territories
-        /// 
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string TotalPropetyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(TotalPropetyName));
+        }
 
         GameData gameData0 = new GameData("Germany", 10, "Germany", "Germany", false);
         //USA0.Visibility = Visibility.Visible; UK0.Visibility = Visibility.Visible; USSR0.Visibility = Visibility.Visible;
@@ -298,21 +359,6 @@ namespace AxisAndAlliesCalculator
 
         GameData gameData67 = new GameData("SovietFarEast", 1, "USSR", "USSR", false);
         //	Germany67.Visibility = Visibility.Visible;	Japan67.Visibility = Visibility.Visible;
-
-        void radioButton0_Click(object sender, RoutedEventArgs e)
-        {
-            // add, subtract, visible collapsed
-            //Console.WriteLine(string.Format("You clicked on the {0}. button.", (sender as RadioButton).Tag));
-        }
-        //public bool CollapsedAxis(string nation, int num)
-        //{
-        //    for (int i = 0; i < 68; i++)
-        //    {
-        //        if (i == num && (nation == "Germany" || nation == "Japan"))
-        //            return true;
-        //    }
-        //    return false;
-        //}
         private void OnIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
 
@@ -325,13 +371,15 @@ namespace AxisAndAlliesCalculator
                     int num = Int32.Parse(rb.GroupName);
                 }
 
-        }   //if (CollapsedAxis(rb.Content.ToString(), num))
-            //{
-            //    switch (num)
-            //    {
-            //        case 40:
-            //            Axis40.Visibility = Visibility.Collapsed;
-            //            break;
+        }
+
+        //if (CollapsedAxis(rb.Content.ToString(), num))
+        //{
+        //    switch (num)
+        //    {
+        //        case 40:
+        //            Axis40.Visibility = Visibility.Collapsed;
+        //            break;
 
         //            // add other cases here
         //    }
@@ -376,61 +424,79 @@ namespace AxisAndAlliesCalculator
         //    }
         //    return answer;
         //}
-        #region Territory Button Clicks for Menu Items
-        //private void easternUSA_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (sender as Button).ContextMenu.IsEnabled = true;
-        //    (sender as Button).ContextMenu.PlacementTarget = (sender as Button);
-        //    (sender as Button).ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
-        //    (sender as Button).ContextMenu.IsOpen = true;
 
-        //}
-        //private void centralUSA_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (sender as Button).ContextMenu.IsEnabled = true;
-        //    (sender as Button).ContextMenu.PlacementTarget = (sender as Button);
-        //    (sender as Button).ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
-        //    (sender as Button).ContextMenu.IsOpen = true;
-        //}
-        //private void easternCanada_Click(object sender, RoutedEventArgs e)
-        //{
-        //    (sender as Button).ContextMenu.IsEnabled = true;
-        //    (sender as Button).ContextMenu.PlacementTarget = (sender as Button);
-        //    (sender as Button).ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
-        //    (sender as Button).ContextMenu.IsOpen = true;
-        //    var ipc = gameDataList[40];
+        public void LoadBasicCountryListFromHDD(string filename)
+        {
+            var file = new FileStream(
+                filename,
+                FileMode.Open,
+                FileAccess.Read);
 
-        //}
-        //public void SubtractCurrentOwner(GameData theNation)
-        //{
-        //    //string nation = theNation.OWNER;
-        //    switch (theNation.OWNER)
-        //    {
-        //        case "Germany":
-        //            _germanyTotal -= theNation.IPC;
-        //            break;
-        //        case "Japan":
-        //            _japanTotal -= theNation.IPC;
-        //            break;
-        //        case "USA":
-        //            _usaTotal -= theNation.IPC;
-        //            break;
-        //        case "UK":
-        //            _ukTotal -= theNation.IPC;
-        //            break;
-        //        case "USSR":
-        //            _ussrTotal -= theNation.IPC;
-        //            break;
-        //    }
-        //}
-        #endregion
+            using (var reader = new StreamReader(file))
+            {
+                //Console.WriteLine("---------------  reading ListDontCheckBirth_H_W (from file)");
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    if (line == null)
+                        break;
+                    //Console.WriteLine(" DontCheckBirth_H_W (from file): {0}", line);
+
+                    var lineColl = line.Split(';');  // splits the line from file into 4 columns
+
+                    string _territory = lineColl[0].Trim(); //.value ;
+                    string _ipcString = lineColl[1].Trim();
+                    int _ipc = Convert.ToInt32(_ipcString);
+                    string _owner = lineColl[2].Trim();
+                    string _origOwner = lineColl[3].Trim();
+                    string _occupiedString = lineColl[4].Trim();
+                    bool _occupied = false;
+                    if (_occupiedString == "true" || _occupiedString == "True")
+                         _occupied = true;
+                    else if (_occupiedString != "false" || _occupiedString != "False")
+                        Console.WriteLine(" check _occupied entry from file, not true and not false, Territory = {0}", _territory);
+
+                    GameData thisGameData = new GameData(_territory, _ipc, _owner, _origOwner, _occupied);
+                    _gameDataList.Add(thisGameData);
+                }
+            }
+
+        }
+        public void UpdateScreen()
+        {
+            _germanyTotal = GameDataList.Where(s => s.OWNER == "Germany").Select(s => s.IPC).ToList().Sum();
+            OnPropertyChanged("GermanyTotal");
+            _japanTotal = GameDataList.Where(s => s.OWNER == "Japan").Select(s => s.IPC).ToList().Sum();
+            OnPropertyChanged("JapanTotal");
+            _usaTotal = GameDataList.Where(s => s.OWNER == "USA").Select(s => s.IPC).ToList().Sum();
+            OnPropertyChanged("USATotal");
+            _ukTotal = GameDataList.Where(s => s.OWNER == "UK").Select(s => s.IPC).ToList().Sum();
+            OnPropertyChanged("UKTotal");
+            _ussrTotal = GameDataList.Where(s => s.OWNER == "USSR").Select(s => s.IPC).ToList().Sum();
+            OnPropertyChanged("USSRTotal");
+        }
+        public void ChangeOwner(string nowOwning, string territory) // radio button group name sending name of Territory
+        {
+            string _territoryString = territory.Trim();
+            var newOwner = "not set";
+            newOwner = nowOwning.Trim();
+
+            var territoryINT = GameDataList.FindIndex(item => item.TERRITORY == _territoryString);
+            if (territoryINT >= 0)
+            {
+                GameDataList[territoryINT].OWNER = newOwner;
+                Console.WriteLine("...new Owner of {0} = {1}", _territoryString, newOwner);
+            }
+        }
+
         #region Menu Item (nation) Clicks
         private void click0(object sender, RoutedEventArgs e)
         {
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
-                //updateMapData();
+                ChangeOwner((string)rb.Content, (string)rb.GroupName); // button group name as territory name
+                UpdateScreen();
             }
         }
         private void click40(object sender, RoutedEventArgs e)
@@ -438,191 +504,91 @@ namespace AxisAndAlliesCalculator
             RadioButton rb = sender as RadioButton;
             if (rb != null)
             {
-                gameData40.OWNER = "Germany";
-                Germany40.Visibility = Visibility.Collapsed; Japan40.Visibility = Visibility.Collapsed;
-                USA40.Visibility = Visibility.Visible; UK40.Visibility = Visibility.Visible; USSR40.Visibility = Visibility.Visible;
-                updateMapData();
-                //OpenFileDialog openFileDialog = new OpenFileDialog();
-                //if (openFileDialog.ShowDialog() == true)
-                //{
-                //    Uri fileUri = new Uri(openFileDialog.FileName);
-                //    imgDynamic.Source = new BitmapImage(fileUri);
-                //}
-
-                //Axis(rb);
-                //int num = Int32.Parse(rb.GroupName);
-                //if (!_gameDataList[Int32.Parse(rb.GroupName)].OCCUPIED)
-                //    Axis(rb);
-                //else
-                //    Allies(rb);
-                //string G = "Germany" + num.ToString();
-                //string J = "Japan" + num.ToString();
-                //string US = "USA" + num.ToString();
-                //string UK = "UK" + num.ToString();
-                //string R = "USSR" + num.ToString();
-                //if (rb.Name == G) //(Germany40.IsChecked == true)
-                //{
-                //    if (Alined(gameDataList[num].ORIGINAL_OWNER, rb.Content.ToString()))
-                //    {
-                //        _japanTotal += gameDataList[num].IPC;
-                //        SubtractCurrentOwner(gameDataList[num]);
-                //        gameDataList[num].OWNER = "Japan";
-                //    }
-                //    else
-                //    {
-                //        _germanyTotal += gameDataList[num].IPC;
-                //        SubtractCurrentOwner(gameDataList[num]);
-                //        gameDataList[num].OWNER = "Germany";
-                //    }
-                //}
-                //if (rb.Name == J)
-                //{
-                //    if (gameDataList[num].ORIGINAL_OWNER == rb.Content.ToString())
-                //    {
-                //        _japanTotal += gameDataList[num].IPC;
-                //        SubtractCurrentOwner(gameDataList[num]);
-                //        gameDataList[num].OWNER = "Japan";
-                //    }
-                //    else if (Alined(gameDataList[num].ORIGINAL_OWNER, rb.Content.ToString()))
-                //    {
-                //        _japanTotal += gameDataList[num].IPC;
-                //        SubtractCurrentOwner(gameDataList[num]);
-                //        gameDataList[num].OWNER = "Japan";
-                //    }
-                //}
-                //if (USA40.IsChecked == true)
-                //{
-                //    _usaTotal += gameDataList[40].IPC;
-                //}
-                //if (UK40.IsChecked == true)
-                //{
-                //    _ukTotal += gameDataList[40].IPC;
-                //}
-                //if (USSR40.IsChecked == true)
-                //{
-                //    _ussrTotal += gameDataList[40].IPC;
-                //}
+                ChangeOwner((string)rb.Content, (string)rb.GroupName);
+                UpdateScreen();
             }
         }
         //public bool OriginalOwner(string originalOwner, string invader)
         //{
         //    return true;
         //}
-        //private void addGermany(object sender, RoutedEventArgs e) // test this on eastern canada
-        //{
-
-        //    //if (repeatTerretory == (sender as GameData).TERRITORY)
-        //    //    already = "no";
-        //    // need to check if Germany liberated this so Japan gets the IPC
-        //    //if (already != "Germany")
-
-        //    {
-        //        if ((sender as GameData).ORIGINAL_OWNER == "Japan")
-        //        {
-        //            _japanTotal += (sender as GameData).IPC;
-        //            (sender as GameData).OWNER = "Japan";
-        //            // ToDo turn on japan map marker 
-        //        }
-        //        else if (already != "Germany")
-        //        {
-        //            _germanyTotal += (sender as GameData).IPC;
-        //            // ToDo turn on germany map maker
-        //            (sender as GameData).OWNER = "Germany";
-        //            already = "Germany";
-        //        }
-        //        // else do nothing??
-
-        //        switch ((sender as GameData).ORIGINAL_OWNER)
-        //        {
-        //            case "USA":
-        //                _usaTotal -= (sender as GameData).IPC;
-        //                break;
-        //            case "UK":
-        //                _ukTotal -= (sender as GameData).IPC;
-        //                break;
-        //            case "USSR":
-        //                _ussrTotal -= (sender as GameData).IPC;
-        //                break;
-        //        }
-        //       // repeatTerretory = "Germany"; // need the attacker
-        //    }
-        //}
+     
         #endregion
 
-        public void updateMapData() //updateMapData()
-        {
-            _gameDataList.Add(gameData0);
-            USA0.Visibility = Visibility.Visible; UK0.Visibility = Visibility.Visible; USSR0.Visibility = Visibility.Visible;
-            _gameDataList.Add(gameData1);
-            _gameDataList.Add(gameData2);
-            _gameDataList.Add(gameData3);
-            _gameDataList.Add(gameData4);
-            _gameDataList.Add(gameData5);
-            _gameDataList.Add(gameData6);
-            _gameDataList.Add(gameData7);
-            _gameDataList.Add(gameData8);
-            _gameDataList.Add(gameData9);
-            _gameDataList.Add(gameData10);
-            _gameDataList.Add(gameData11);
-            _gameDataList.Add(gameData12);
-            _gameDataList.Add(gameData13);
-            _gameDataList.Add(gameData14);
-            _gameDataList.Add(gameData15);
-            _gameDataList.Add(gameData16);
-            _gameDataList.Add(gameData17);
-            _gameDataList.Add(gameData18);
-            _gameDataList.Add(gameData19);
-            _gameDataList.Add(gameData20);
-            _gameDataList.Add(gameData21);
-            _gameDataList.Add(gameData22);
-            _gameDataList.Add(gameData23);
-            _gameDataList.Add(gameData24);
-            _gameDataList.Add(gameData25);
-            _gameDataList.Add(gameData26);
-            _gameDataList.Add(gameData27);
-            _gameDataList.Add(gameData28);
-            _gameDataList.Add(gameData29);
-            _gameDataList.Add(gameData30);
-            _gameDataList.Add(gameData31);
-            _gameDataList.Add(gameData32);
-            _gameDataList.Add(gameData33);
-            _gameDataList.Add(gameData34);
-            _gameDataList.Add(gameData35);
-            _gameDataList.Add(gameData36);
-            _gameDataList.Add(gameData37);
-            _gameDataList.Add(gameData38);
-            _gameDataList.Add(gameData39);
-            _gameDataList.Add(gameData40);
-           // Germany40.Visibility = Visibility.Visible; Japan40.Visibility = Visibility.Visible;
-            _gameDataList.Add(gameData41);
-            _gameDataList.Add(gameData42);
-            _gameDataList.Add(gameData43);
-            _gameDataList.Add(gameData44);
-            _gameDataList.Add(gameData45);
-            _gameDataList.Add(gameData46);
-            _gameDataList.Add(gameData47);
-            _gameDataList.Add(gameData48);
-            _gameDataList.Add(gameData49);
-            _gameDataList.Add(gameData50);
-            _gameDataList.Add(gameData51);
-            _gameDataList.Add(gameData52);
-            _gameDataList.Add(gameData53);
-            _gameDataList.Add(gameData54);
-            _gameDataList.Add(gameData55);
-            _gameDataList.Add(gameData56);
-            _gameDataList.Add(gameData57);
-            _gameDataList.Add(gameData58);
-            _gameDataList.Add(gameData59);
-            _gameDataList.Add(gameData60);
-            _gameDataList.Add(gameData61);
-            _gameDataList.Add(gameData62);
-            _gameDataList.Add(gameData63);
-            _gameDataList.Add(gameData64);
-            _gameDataList.Add(gameData65);
-            _gameDataList.Add(gameData66);
-            _gameDataList.Add(gameData67);
-        }
-
+        //public void LoadMapDataList()
+        //{
+        //    _gameDataList.Add(gameData0);
+        //    _gameDataList.Add(gameData1);
+        //    _gameDataList.Add(gameData2);
+        //    _gameDataList.Add(gameData3);
+        //    _gameDataList.Add(gameData4);
+        //    _gameDataList.Add(gameData5);
+        //    _gameDataList.Add(gameData6);
+        //    _gameDataList.Add(gameData7);
+        //    _gameDataList.Add(gameData8);
+        //    _gameDataList.Add(gameData9);
+        //    _gameDataList.Add(gameData10);
+        //    _gameDataList.Add(gameData11);
+        //    _gameDataList.Add(gameData12);
+        //    _gameDataList.Add(gameData13);
+        //    _gameDataList.Add(gameData14);
+        //    _gameDataList.Add(gameData15);
+        //    _gameDataList.Add(gameData16);
+        //    _gameDataList.Add(gameData17);
+        //    _gameDataList.Add(gameData18);
+        //    _gameDataList.Add(gameData19);
+        //    _gameDataList.Add(gameData20);
+        //    _gameDataList.Add(gameData21);
+        //    _gameDataList.Add(gameData22);
+        //    _gameDataList.Add(gameData23);
+        //    _gameDataList.Add(gameData24);
+        //    _gameDataList.Add(gameData25);
+        //    _gameDataList.Add(gameData26);
+        //    _gameDataList.Add(gameData27);
+        //    _gameDataList.Add(gameData28);
+        //    _gameDataList.Add(gameData29);
+        //    _gameDataList.Add(gameData30);
+        //    _gameDataList.Add(gameData31);
+        //    _gameDataList.Add(gameData32);
+        //    _gameDataList.Add(gameData33);
+        //    _gameDataList.Add(gameData34);
+        //    _gameDataList.Add(gameData35);
+        //    _gameDataList.Add(gameData36);
+        //    _gameDataList.Add(gameData37);
+        //    _gameDataList.Add(gameData38);
+        //    _gameDataList.Add(gameData39);
+        //    _gameDataList.Add(gameData40);
+        //    _gameDataList.Add(gameData41);
+        //    _gameDataList.Add(gameData42);
+        //    _gameDataList.Add(gameData43);
+        //    _gameDataList.Add(gameData44);
+        //    _gameDataList.Add(gameData45);
+        //    _gameDataList.Add(gameData46);
+        //    _gameDataList.Add(gameData47);
+        //    _gameDataList.Add(gameData48);
+        //    _gameDataList.Add(gameData49);
+        //    _gameDataList.Add(gameData50);
+        //    _gameDataList.Add(gameData51);
+        //    _gameDataList.Add(gameData52);
+        //    _gameDataList.Add(gameData53);
+        //    _gameDataList.Add(gameData54);
+        //    _gameDataList.Add(gameData55);
+        //    _gameDataList.Add(gameData56);
+        //    _gameDataList.Add(gameData57);
+        //    _gameDataList.Add(gameData58);
+        //    _gameDataList.Add(gameData59);
+        //    _gameDataList.Add(gameData60);
+        //    _gameDataList.Add(gameData61);
+        //    _gameDataList.Add(gameData62);
+        //    _gameDataList.Add(gameData63);
+        //    _gameDataList.Add(gameData64);
+        //    _gameDataList.Add(gameData65);
+        //    _gameDataList.Add(gameData66);
+        //    _gameDataList.Add(gameData67);
+        //}
+   
+        //    }
+        //}
         //////  Element of Fam
         //public void Axis(RadioButton rb)
         //{
@@ -682,28 +648,7 @@ namespace AxisAndAlliesCalculator
         //        _ussrTotal += _gameDataList[40].IPC;
         //    }
         //}
-        public class GameData
-        {
-            public string TERRITORY;   // data type string defined here
-            public int IPC;
-            public string OWNER;
-            public string ORIGINAL_OWNER;
-            public bool OCCUPIED;
 
-            public GameData(
-            string territory
-            , int ipc
-            , string owner,
-            string original_owner,
-            bool occupied)
-            {
-                TERRITORY = territory;
-                IPC = ipc;
-                OWNER = owner;
-                ORIGINAL_OWNER = original_owner;
-                OCCUPIED = occupied;
-            }
-        }
 
         private void ImageBrush_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
