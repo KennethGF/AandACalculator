@@ -149,9 +149,9 @@ namespace AxisAndAlliesCalculator
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string TotalPropetyName)
+        protected void OnPropertyChanged(string PropetyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(TotalPropetyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropetyName));
         }
 
         GameData gameData0 = new GameData("Germany", 10, "Germany", "Germany", false);
@@ -514,7 +514,74 @@ namespace AxisAndAlliesCalculator
         //}
      
         #endregion
+  
+        //    }
+        //}
+        //////  Element of Fam
+        //public void Axis(RadioButton rb)
+        //{
+        //    int num = Int32.Parse(rb.GroupName);
+        //    string G = "Germany" + num.ToString();
+        //    string J = "Japan" + num.ToString();
+        //    string US = "USA" + num.ToString();
+        //    string UK = "UK" + num.ToString();
+        //    string R = "USSR" + num.ToString();
+        //    if (rb.Name == G) //(Germany40.IsChecked == true)
+        //    {
+        //        if (Alined(gameDataList[num].ORIGINAL_OWNER, rb.Content.ToString()))
+        //        {
+        //            _japanTotal += gameDataList[num].IPC;
+        //            SubtractCurrentOwner(gameDataList[num]);
+        //            gameDataList[num].OWNER = "Japan";
+        //            gameDataList[num].OCCUPIED = false;
+        //        }
+        //        else
+        //        {
+        //            _germanyTotal += gameDataList[num].IPC;
+        //            SubtractCurrentOwner(gameDataList[num]);
+        //            gameDataList[num].OWNER = "Germany";
+        //            gameDataList[num].OCCUPIED = true;
+        //        }
+        //    }
+        //    if (rb.Name == J)
+        //    {
+        //        if (gameDataList[num].ORIGINAL_OWNER == rb.Content.ToString())
+        //        {
+        //            _japanTotal += gameDataList[num].IPC;
+        //            SubtractCurrentOwner(gameDataList[num]);
+        //            gameDataList[num].OWNER = "Japan";
+        //            gameDataList[num].OCCUPIED = false;
+        //        }
+        //        else if (Alined(gameDataList[num].ORIGINAL_OWNER, rb.Content.ToString()))
+        //        {
+        //            _japanTotal += gameDataList[num].IPC;
+        //            SubtractCurrentOwner(gameDataList[num]);
+        //            gameDataList[num].OWNER = "Germany";
+        //            gameDataList[num].OCCUPIED = true;
+        //        }
+        //    }
+        //}
+        //public void Allies(RadioButton rb)
+        //{
+        //    if (USA40.IsChecked == true)
+        //    {
+        //        _usaTotal += _gameDataList[40].IPC;
+        //    }
+        //    if (UK40.IsChecked == true)
+        //    {
+        //        _ukTotal += _gameDataList[40].IPC;
+        //    }
+        //    if (USSR40.IsChecked == true)
+        //    {
+        //        _ussrTotal += _gameDataList[40].IPC;
+        //    }
+        //}
 
+
+        private void ImageBrush_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
         //public void LoadMapDataList()
         //{
         //    _gameDataList.Add(gameData0);
@@ -586,82 +653,5 @@ namespace AxisAndAlliesCalculator
         //    _gameDataList.Add(gameData66);
         //    _gameDataList.Add(gameData67);
         //}
-   
-        //    }
-        //}
-        //////  Element of Fam
-        //public void Axis(RadioButton rb)
-        //{
-        //    int num = Int32.Parse(rb.GroupName);
-        //    string G = "Germany" + num.ToString();
-        //    string J = "Japan" + num.ToString();
-        //    string US = "USA" + num.ToString();
-        //    string UK = "UK" + num.ToString();
-        //    string R = "USSR" + num.ToString();
-        //    if (rb.Name == G) //(Germany40.IsChecked == true)
-        //    {
-        //        if (Alined(gameDataList[num].ORIGINAL_OWNER, rb.Content.ToString()))
-        //        {
-        //            _japanTotal += gameDataList[num].IPC;
-        //            SubtractCurrentOwner(gameDataList[num]);
-        //            gameDataList[num].OWNER = "Japan";
-        //            gameDataList[num].OCCUPIED = false;
-        //        }
-        //        else
-        //        {
-        //            _germanyTotal += gameDataList[num].IPC;
-        //            SubtractCurrentOwner(gameDataList[num]);
-        //            gameDataList[num].OWNER = "Germany";
-        //            gameDataList[num].OCCUPIED = true;
-        //        }
-        //    }
-        //    if (rb.Name == J)
-        //    {
-        //        if (gameDataList[num].ORIGINAL_OWNER == rb.Content.ToString())
-        //        {
-        //            _japanTotal += gameDataList[num].IPC;
-        //            SubtractCurrentOwner(gameDataList[num]);
-        //            gameDataList[num].OWNER = "Japan";
-        //            gameDataList[num].OCCUPIED = false;
-        //        }
-        //        else if (Alined(gameDataList[num].ORIGINAL_OWNER, rb.Content.ToString()))
-        //        {
-        //            _japanTotal += gameDataList[num].IPC;
-        //            SubtractCurrentOwner(gameDataList[num]);
-        //            gameDataList[num].OWNER = "Germany";
-        //            gameDataList[num].OCCUPIED = true;
-        //        }
-        //    }
-        //}
-        //public void Allies(RadioButton rb)
-        //{
-        //    if (USA40.IsChecked == true)
-        //    {
-        //        _usaTotal += _gameDataList[40].IPC;
-        //    }
-        //    if (UK40.IsChecked == true)
-        //    {
-        //        _ukTotal += _gameDataList[40].IPC;
-        //    }
-        //    if (USSR40.IsChecked == true)
-        //    {
-        //        _ussrTotal += _gameDataList[40].IPC;
-        //    }
-        //}
-
-
-        private void ImageBrush_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
-
-        }
     }
-    //public class SimpleViewModel
-    //{
-    //    public string Location { get; set; }
-
-    //    public SimpleViewModel()
-    //    {
-    //        Location = System.AppDomain.CurrentDomain.BaseDirectory + @"Images/German.png";
-    //    }
-    //}
 }
