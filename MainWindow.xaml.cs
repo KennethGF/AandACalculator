@@ -185,6 +185,7 @@ namespace AxisAndAlliesCalculator
                 }
 
         }
+
         #region Load Territories from List
         public void LoadBasicCountryListFromHDD(string filename)
         {
