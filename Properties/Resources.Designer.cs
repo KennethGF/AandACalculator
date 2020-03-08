@@ -63,6 +63,16 @@ namespace AxisAndAlliesCalculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap AandAmap {
+            get {
+                object obj = ResourceManager.GetObject("AandAmap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Germany {
             get {
                 object obj = ResourceManager.GetObject("Germany", resourceCulture);
