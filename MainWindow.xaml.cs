@@ -38,7 +38,7 @@ namespace AxisAndAlliesCalculator
             OCCUPIED = occupied;
         }
     }
-    public partial class MainWindow : INotifyPropertyChanged
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
 
     #region Fields and Properties

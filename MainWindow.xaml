@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AxisAndAlliesCalculator"
-        xmlns:Properties="clr-namespace:AxisAndAlliesCalculator.Properties"
+        
         mc:Ignorable="d"
+
+        xmlns:utils1="clr-namespace:AxisAndAlliesCalculator"
         Title="IPC Calculator" Height="1824" Width="2736" Topmost="False" VerticalAlignment="Top">
 
     <Window.Resources>
@@ -61,9 +62,10 @@
             Margin="0,0,0,0"
             Height="1015"
             Width="1915">
-        
-        <Grid HorizontalAlignment="Stretch">
-            <Grid.ColumnDefinitions>
+        <utils1:ZoomBorder x:Name="border" ClipToBounds="True" Background="Gray">
+            <Grid HorizontalAlignment="Stretch">
+
+            <Grid.ColumnDefinitions>      
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -218,6 +220,8 @@
                     <TextBlock Text="{Binding Path=GameTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
+           
         </Grid>
+        </utils1:ZoomBorder>
     </ScrollViewer>
 </Window>
