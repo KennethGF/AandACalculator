@@ -2,10 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
         mc:Ignorable="d"
-
         xmlns:utils1="clr-namespace:AxisAndAlliesCalculator"
         Title="IPC Calculator" Height="1824" Width="2736" Topmost="False" VerticalAlignment="Top">
 
@@ -55,173 +53,228 @@
             <Setter Property="Orientation" Value="Vertical"/>
         </Style>
     </Window.Resources>
-    
+
     <ScrollViewer
             HorizontalScrollBarVisibility="Visible"
             VerticalScrollBarVisibility="Auto"
             Margin="0,0,0,0"
-            Height="1015"
+            Height="1070"
             Width="1915">
         <utils1:ZoomBorder x:Name="border" ClipToBounds="True" Background="Gray">
             <Grid HorizontalAlignment="Stretch">
 
-            <Grid.ColumnDefinitions>      
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/> <!--15-->
-            </Grid.RowDefinitions>
-            
-            <Grid.Background>
-                <ImageBrush ImageSource="/Resources/AandAmap.png" Stretch="Fill"/>
-            </Grid.Background>
-            <StackPanel x:Name="Spacer1" Grid.Row="1" Grid.Column="1" Width="200" Height="150" />
-            <StackPanel x:Name="Spacer2" Grid.Row="2" Grid.Column="2" Width="200" Height="150" />
-            <StackPanel x:Name="Germany00" Grid.Column="3" Grid.Row="3" Margin="5,5,0,0">
-                <StackPanel x:Name="Header0" Orientation="Horizontal">
-                    <TextBlock Text="Germany (10)"></TextBlock>
-                    <Image x:Name="iG0" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
-                    <Image x:Name="iJ0" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                    <Image x:Name="iUSA0" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                    <Image x:Name="iUK0" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                    <Image x:Name="iUSSR0" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                </StackPanel>
-                <StackPanel x:Name="Axis0" Visibility="Collapsed">
-                    <StackPanel Orientation="Horizontal">
-                        <RadioButton
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <!--14-->
+                </Grid.RowDefinitions>
+
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Resources/AandAmap.png" Stretch="Fill"/>
+                </Grid.Background>
+                <StackPanel x:Name="Spacer1" Grid.Row="1" Grid.Column="1" Width="200" Height="150" />
+                <StackPanel x:Name="Spacer2" Grid.Row="2" Grid.Column="2" Width="200" Height="150" />
+                <StackPanel x:Name="Germany00" Grid.Column="7" Grid.Row="4" Margin="5,30,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <StackPanel x:Name="Header0" Orientation="Horizontal" Margin="0,0,0,0">
+                        <TextBlock Text="Germany (10)"></TextBlock>
+                        <Image x:Name="iG0" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                        <Image x:Name="iJ0" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSA0" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUK0" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSSR0" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Axis0" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
                                     x:Name="G0"
                                     VerticalAlignment="Top"                            
                                     GroupName="Germany"                                 
                                     Content="Germany"                   
                                     Checked="click0"/>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel x:Name="Allies0" Visibility="Visible">
-                    <StackPanel>
-                        <RadioButton
+                    <StackPanel x:Name="Allies0" Visibility="Visible">
+                        <StackPanel>
+                            <RadioButton
                                     x:Name="USA0"
                                     VerticalAlignment="Top"
                                     GroupName="Germany"
                                     Content="USA"                        
                                     Checked="click0"/>
-                    </StackPanel>
-                    <StackPanel>
-                        <RadioButton
+                        </StackPanel>
+                        <StackPanel>
+                            <RadioButton
                                     x:Name="UK0"
                                     VerticalAlignment="Top"
                                     GroupName="Germany"                             
                                     Content="UK"
                                     Checked="click0"/>
-                    </StackPanel>
-                    <StackPanel>
-                        <RadioButton
+                        </StackPanel>
+                        <StackPanel>
+                            <RadioButton
                                     x:Name="USSR0"
                                     VerticalAlignment="Top"
                                     GroupName="Germany"
                                     Content="USSR"                              
                                     Checked="click0"/>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel x:Name="EasternCanada400" Grid.Column="0" Grid.Row="0" Margin="5,5,0,0">
-                <StackPanel x:Name="Header40" Orientation="Horizontal">
-                    <TextBlock Text="  Eastern Canada (3)"></TextBlock>
-                    <Image x:Name="iG40" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                    <Image x:Name="iJ40" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                    <Image x:Name="iUSA40" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                    <Image x:Name="iUK40" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
-                    <Image x:Name="iUSSR40" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                <StackPanel x:Name="France00" Grid.Column="6" Grid.Row="5" Margin="5,5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <StackPanel x:Name="Header1" Orientation="Horizontal">
+                        <TextBlock Text="France (6)"></TextBlock>
+                        <Image x:Name="iG1" Source="/Resources/Germany.png" Margin="5,1,0,0" Width="20" Height="20" Visibility="Visible"/>
+                        <Image x:Name="iJ1" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSA1" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUK1" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSSR1" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Axis1" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
+                                    x:Name="G1"
+                                    VerticalAlignment="Top"                            
+                                    GroupName="Germany"                                 
+                                    Content="Germany"                   
+                                    Checked="click1"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel x:Name="Allies1" Visibility="Visible">
+                        <StackPanel>
+                            <RadioButton
+                                    x:Name="USA1"
+                                    VerticalAlignment="Top"
+                                    GroupName="Germany"
+                                    Content="USA"                        
+                                    Checked="click1"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <RadioButton
+                                    x:Name="UK1"
+                                    VerticalAlignment="Top"
+                                    GroupName="Germany"                             
+                                    Content="UK"
+                                    Checked="click1"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <RadioButton
+                                    x:Name="USSR1"
+                                    VerticalAlignment="Top"
+                                    GroupName="Germany"
+                                    Content="USSR"                              
+                                    Checked="click1"/>
+                        </StackPanel>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel x:Name="Axis40" Visibility="Visible">
-                    <StackPanel Orientation="Horizontal">
-                        <RadioButton
+                <StackPanel x:Name="EasternCanada400" Grid.Column="2" Grid.Row="2" Margin="0,0,0,0" Grid.ColumnSpan="2">
+                    <StackPanel x:Name="Header40" Orientation="Horizontal">
+                        <TextBlock Text="  Eastern Canada (3)"></TextBlock>
+                        <Image x:Name="iG40" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iJ40" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSA40" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUK40" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                        <Image x:Name="iUSSR40" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Axis40" Visibility="Visible">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
                                     x:Name="G40"
                                     VerticalAlignment="Top"                              
                                     GroupName="EasternCanada"                                 
                                     Content="Germany"
                                     Checked="click40"/>
-                    </StackPanel>
-                    <StackPanel >
-                        <RadioButton
+                        </StackPanel>
+                        <StackPanel >
+                            <RadioButton
                                     VerticalAlignment="Top"
                                     x:Name="J40"
                                     GroupName="EasternCanada"                          
                                     Content="Japan" 
                                     Checked="click40"/>
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel x:Name="Allies40" Visibility="Collapsed">
-                    <StackPanel>
-                        <RadioButton
+                    <StackPanel x:Name="Allies40" Visibility="Collapsed">
+                        <StackPanel>
+                            <RadioButton
                                     x:Name="UK40"
                                     VerticalAlignment="Top"
                                     GroupName="EasternCanada"      
                                     Content="UK"
                                     Checked="click40"/>
-                    </StackPanel>
+                        </StackPanel>
 
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel x:Name="Totals" Grid.Column="1" Grid.Row="15">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total IPC for Germany = " FontSize="18"/>
-                    <TextBlock Text="{Binding Path=GermanyTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                <StackPanel x:Name="Totals" Grid.Column="3" Grid.Row="12" Grid.ColumnSpan="4" Grid.RowSpan="3">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total IPC for Germany = " FontSize="18"/>
+                        <TextBlock Text="{Binding Path=GermanyTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total IPC for Japan = " FontSize="18"/>
+                        <TextBlock Text="{Binding Path=JapanTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total IPC for the USA = " FontSize="18"/>
+                        <TextBlock Text="{Binding Path=USATotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total IPC for the UK = " FontSize="18"/>
+                        <TextBlock Text="{Binding Path=UKTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total IPC for the USSR = " FontSize="18"/>
+                        <TextBlock Text="{Binding Path=USSRTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Total IPC for Game = " FontSize="18"/>
+                        <TextBlock Text="{Binding Path=GameTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total IPC for Japan = " FontSize="18"/>
-                    <TextBlock Text="{Binding Path=JapanTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total IPC for the USA = " FontSize="18"/>
-                    <TextBlock Text="{Binding Path=USATotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total IPC for the UK = " FontSize="18"/>
-                    <TextBlock Text="{Binding Path=UKTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total IPC for the USSR = " FontSize="18"/>
-                    <TextBlock Text="{Binding Path=USSRTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Total IPC for Game = " FontSize="18"/>
-                    <TextBlock Text="{Binding Path=GameTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
-                </StackPanel>
-            </StackPanel>
-           
-        </Grid>
+
+            </Grid>
         </utils1:ZoomBorder>
     </ScrollViewer>
 </Window>
