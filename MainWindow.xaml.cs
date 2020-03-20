@@ -403,8 +403,51 @@ namespace AxisAndAlliesCalculator
                 }
                 UpdateScreen();
             }
-        }    
-        #endregion   
+        }
+        private void click27(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                ChangeOwner(owner, (string)radioButton.GroupName); // button group name as territory name
+                if (owner != "USA")
+                {
+                    Axis27.Visibility = Visibility.Collapsed;
+                    Allies27.Visibility = Visibility.Visible;
+                    iUSA27.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis27.Visibility = Visibility.Visible;
+                    Allies27.Visibility = Visibility.Collapsed;
+                    iUSA27.Visibility = Visibility.Visible;
+                    iG27.Visibility = Visibility.Collapsed;
+                    iJ27.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USA")
+                {
+                    iUSA27.Visibility = Visibility.Visible;
+                    iG27.Visibility = Visibility.Collapsed;
+                    iJ27.Visibility = Visibility.Collapsed;
+
+                }
+                if (owner == "Germany")
+                {
+                    iUSA27.Visibility = Visibility.Collapsed;
+                    iG27.Visibility = Visibility.Visible;
+                    iJ27.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iUSA27.Visibility = Visibility.Collapsed;
+                    iG27.Visibility = Visibility.Collapsed;
+                    iJ27.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
+        #endregion
         private void ImageBrush_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 

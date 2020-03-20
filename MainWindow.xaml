@@ -207,7 +207,7 @@
                                     Checked="click1"/>
                         </StackPanel>
                     </StackPanel>
-                </StackPanel>
+                </StackPanel>           
                 <StackPanel x:Name="EasternCanada400" Grid.Column="2" Grid.Row="2" Margin="0,0,0,0" Grid.ColumnSpan="2">
                     <StackPanel x:Name="Header40" Orientation="Horizontal">
                         <TextBlock Text="  Eastern Canada (3)"></TextBlock>
@@ -244,9 +244,46 @@
                                     Content="UK"
                                     Checked="click40"/>
                         </StackPanel>
-
                     </StackPanel>
                 </StackPanel>
+              <StackPanel x:Name="CentralUSA270" Grid.Column="0" Grid.Row="4" Margin="0,0,0,0" Grid.ColumnSpan="2">
+                <StackPanel x:Name="Header27" Orientation="Vertical">
+                  <Image x:Name="iG27" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iJ27" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSA27" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                  <Image x:Name="iUK27" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSSR27" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                </StackPanel>
+                <StackPanel x:Name="Axis27" Visibility="Visible">
+                  <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                            x:Name="G27"
+                            VerticalAlignment="Top"
+                            GroupName="CentralUSA"
+                            Content="Germany"
+                            Checked="click27"/>
+                  </StackPanel>
+                  <StackPanel >
+                    <RadioButton
+                            VerticalAlignment="Top"
+                            x:Name="J27"
+                            GroupName="CentralUSA"
+                            Content="Japan"
+                            Checked="click27"/>
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Allies27" Visibility="Collapsed">
+                  <StackPanel>
+                    <RadioButton
+                            x:Name="USA27"
+                            VerticalAlignment="Top"
+                            GroupName="CentralUSA"
+                            Content="USA"
+                            Checked="click27"/>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+              
                 <StackPanel x:Name="Totals" Grid.Column="3" Grid.Row="12" Grid.ColumnSpan="4" Grid.RowSpan="3">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Total IPC for Germany = " FontSize="18"/>
