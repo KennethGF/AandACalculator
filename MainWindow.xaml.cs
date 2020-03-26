@@ -361,45 +361,46 @@ namespace AxisAndAlliesCalculator
                 UpdateScreen();
             }
         }
-        private void click40(object sender, RoutedEventArgs e)
+ 
+        private void click26(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = sender as RadioButton;
             if (radioButton != null)
             {
                 var owner = (string)radioButton.Content;
                 ChangeOwner(owner, (string)radioButton.GroupName); // button group name as territory name
-                if (owner != "UK")
+                if (owner != "USA")
                 {
-                    Axis40.Visibility = Visibility.Collapsed;
-                    Allies40.Visibility = Visibility.Visible;
-                    iUK40.Visibility = Visibility.Collapsed;
+                    Axis26.Visibility = Visibility.Collapsed;
+                    Allies26.Visibility = Visibility.Visible;
+                    iUSA26.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    Axis40.Visibility = Visibility.Visible;
-                    Allies40.Visibility = Visibility.Collapsed;
-                    iUK40.Visibility = Visibility.Visible;
-                    iG40.Visibility = Visibility.Collapsed;
-                    iJ40.Visibility = Visibility.Collapsed;
+                    Axis26.Visibility = Visibility.Visible;
+                    Allies26.Visibility = Visibility.Collapsed;
+                    iUSA26.Visibility = Visibility.Visible;
+                    iG26.Visibility = Visibility.Collapsed;
+                    iJ26.Visibility = Visibility.Collapsed;
                 }
-                if (owner == "UK")
+                if (owner == "USA")
                 {
-                    iUK40.Visibility = Visibility.Visible;
-                    iG40.Visibility = Visibility.Collapsed;
-                    iJ40.Visibility = Visibility.Collapsed;
+                    iUSA26.Visibility = Visibility.Visible;
+                    iG26.Visibility = Visibility.Collapsed;
+                    iJ26.Visibility = Visibility.Collapsed;
 
                 }
                 if (owner == "Germany")
                 {
-                    iUK40.Visibility = Visibility.Collapsed;
-                    iG40.Visibility = Visibility.Visible;
-                    iJ40.Visibility = Visibility.Collapsed;
+                    iUSA26.Visibility = Visibility.Collapsed;
+                    iG26.Visibility = Visibility.Visible;
+                    iJ26.Visibility = Visibility.Collapsed;
                 }
                 if (owner == "Japan")
                 {
-                    iUK40.Visibility = Visibility.Collapsed;
-                    iG40.Visibility = Visibility.Collapsed;
-                    iJ40.Visibility = Visibility.Visible;
+                    iUSA26.Visibility = Visibility.Collapsed;
+                    iG26.Visibility = Visibility.Collapsed;
+                    iJ26.Visibility = Visibility.Visible;
                 }
                 UpdateScreen();
             }
@@ -443,6 +444,49 @@ namespace AxisAndAlliesCalculator
                     iUSA27.Visibility = Visibility.Collapsed;
                     iG27.Visibility = Visibility.Collapsed;
                     iJ27.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
+        private void click40(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                ChangeOwner(owner, (string)radioButton.GroupName); // button group name as territory name
+                if (owner != "UK")
+                {
+                    Axis40.Visibility = Visibility.Collapsed;
+                    Allies40.Visibility = Visibility.Visible;
+                    iUK40.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis40.Visibility = Visibility.Visible;
+                    Allies40.Visibility = Visibility.Collapsed;
+                    iUK40.Visibility = Visibility.Visible;
+                    iG40.Visibility = Visibility.Collapsed;
+                    iJ40.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "UK")
+                {
+                    iUK40.Visibility = Visibility.Visible;
+                    iG40.Visibility = Visibility.Collapsed;
+                    iJ40.Visibility = Visibility.Collapsed;
+
+                }
+                if (owner == "Germany")
+                {
+                    iUK40.Visibility = Visibility.Collapsed;
+                    iG40.Visibility = Visibility.Visible;
+                    iJ40.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iUK40.Visibility = Visibility.Collapsed;
+                    iG40.Visibility = Visibility.Collapsed;
+                    iJ40.Visibility = Visibility.Visible;
                 }
                 UpdateScreen();
             }
