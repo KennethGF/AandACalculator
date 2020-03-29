@@ -62,7 +62,6 @@
             Width="1915">
         <utils1:ZoomBorder x:Name="border" ClipToBounds="True" Background="Gray">
             <Grid HorizontalAlignment="Stretch">
-
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="70"/>
