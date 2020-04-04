@@ -1644,6 +1644,50 @@ namespace AxisAndAlliesCalculator
                 UpdateScreen();
             }
         }
+        private void click46(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "UK")
+                {
+                    Axis46.Visibility = Visibility.Collapsed;
+                    Allies46.Visibility = Visibility.Visible;
+                    iUK46.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis46.Visibility = Visibility.Visible;
+                    Allies46.Visibility = Visibility.Collapsed;
+                    iUK46.Visibility = Visibility.Visible;
+                    iG46.Visibility = Visibility.Collapsed;
+                    iJ46.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "UK")
+                {
+                    iUK46.Visibility = Visibility.Visible;
+                    iG46.Visibility = Visibility.Collapsed;
+                    iJ46.Visibility = Visibility.Collapsed;
+
+                }
+                if (owner == "Germany")
+                {
+                    iUK46.Visibility = Visibility.Collapsed;
+                    iG46.Visibility = Visibility.Visible;
+                    iJ46.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iUK46.Visibility = Visibility.Collapsed;
+                    iG46.Visibility = Visibility.Collapsed;
+                    iJ46.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
         private void click51(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = sender as RadioButton;

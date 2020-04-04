@@ -1247,15 +1247,15 @@
                     </StackPanel>
                 </StackPanel>
               <!-- Jordan 43 -->
-              <StackPanel x:Name="Jordan43" Grid.Column="11" Grid.Row="7" Margin="15,40,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center">
-                <StackPanel x:Name="Header43" Orientation="Vertical">
+              <StackPanel x:Name="Jordan43" Grid.Column="11" Grid.Row="7" Margin="8,45,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="left">
+                <StackPanel x:Name="Header43" Orientation="Horizontal">
+                  <TextBlock Text="  Jordan (1)"></TextBlock>
                   <Image x:Name="iG43" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
                   <Image x:Name="iJ43" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
                   <Image x:Name="iUSA43" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
                   <Image x:Name="iUK43" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
                   <Image x:Name="iUSSR43" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                  <TextBlock Text="Jordan (1)"></TextBlock>
-                </StackPanel>
+                    </StackPanel>
                 <StackPanel x:Name="Axis43" Visibility="Visible">
                   <StackPanel Orientation="Horizontal">
                     <RadioButton
@@ -1363,6 +1363,45 @@
                   </StackPanel>
                 </StackPanel>
               </StackPanel>
+                <!-- Burma 46 -->
+                <StackPanel x:Name="Burma46" Grid.Column="16" Grid.Row="9" Margin="0,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="1" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <StackPanel x:Name="Header46" Orientation="Vertical">
+                        <Image x:Name="iG46" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iJ46" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSA46" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUK46" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                        <Image x:Name="iUSSR46" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <TextBlock Text="Burma (1)"></TextBlock>
+                    </StackPanel>
+                    <StackPanel x:Name="Axis46" Visibility="Visible">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
+                      x:Name="G46"
+                      VerticalAlignment="Top"
+                      GroupName="46"
+                      Content="Germany"
+                      Checked="click46"/>
+                        </StackPanel>
+                        <StackPanel >
+                            <RadioButton
+                      VerticalAlignment="Top"
+                      x:Name="J46"
+                      GroupName="46"
+                      Content="Japan"
+                      Checked="click46"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel x:Name="Allies46" Visibility="Collapsed">
+                        <StackPanel>
+                            <RadioButton
+                      x:Name="UK46"
+                      VerticalAlignment="Top"
+                      GroupName="46"
+                      Content="UK"
+                      Checked="click46"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
                 <!-- French West Africa 51 -->
                 <StackPanel x:Name="FrechWestAfrica510" Grid.Column="6" Grid.Row="9" Margin="10,25,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left">
                     <StackPanel x:Name="Header51" Orientation="Vertical">
