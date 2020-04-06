@@ -972,7 +972,164 @@
                   </StackPanel>
                 </StackPanel>
               </StackPanel>
-                <!-- Central America 36 -->
+              <!-- Alaska USA 28 -->
+              <StackPanel x:Name="Alaska280" Grid.Column="24" Grid.Row="0" Margin="20,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"> 
+                <StackPanel x:Name="Header28" Orientation="Vertical">
+                  <Image x:Name="iG28" Source="/Resources/Germany.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iJ28" Source="/Resources/Japan.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSA28" Source="/Resources/USA.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                  <Image x:Name="iUK28" Source="/Resources/UK.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSSR28" Source="/Resources/USSR.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <TextBlock Text="Alaska (2)"></TextBlock>
+                </StackPanel>
+                <StackPanel x:Name="Axis28" Visibility="Visible">
+                  <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                            x:Name="G28"
+                            VerticalAlignment="Top"
+                            GroupName="28"
+                            Content="Germany"
+                            Checked="click28"/>
+                  </StackPanel>
+                  <StackPanel >
+                    <RadioButton
+                            VerticalAlignment="Top"
+                            x:Name="J28"
+                            GroupName="28"
+                            Content="Japan"
+                            Checked="click28"/>
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Allies28" Visibility="Collapsed">
+                  <StackPanel>
+                    <RadioButton
+                            x:Name="USA28"
+                            VerticalAlignment="Top"
+                            GroupName="28"
+                            Content="USA"
+                            Checked="click28"/>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+              <!-- Western USA 29 -->
+              <StackPanel x:Name="Western290" Grid.Column="26" Grid.Row="4" Margin="20,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <StackPanel x:Name="Header29" Orientation="Vertical">
+                  <Image x:Name="iG29" Source="/Resources/Germany.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iJ29" Source="/Resources/Japan.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSA29" Source="/Resources/USA.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                  <Image x:Name="iUK29" Source="/Resources/UK.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSSR29" Source="/Resources/USSR.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <TextBlock Text="Western"></TextBlock>
+                  <TextBlock Text="USA (10)"></TextBlock>
+                </StackPanel>
+                <StackPanel x:Name="Axis29" Visibility="Visible">
+                  <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                            x:Name="G29"
+                            VerticalAlignment="Top"
+                            GroupName="29"
+                            Content="Germany"
+                            Checked="click29"/>
+                  </StackPanel>
+                  <StackPanel >
+                    <RadioButton
+                            VerticalAlignment="Top"
+                            x:Name="J29"
+                            GroupName="29"
+                            Content="Japan"
+                            Checked="click29"/>
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Allies29" Visibility="Collapsed">
+                  <StackPanel>
+                    <RadioButton
+                            x:Name="USA29"
+                            VerticalAlignment="Top"
+                            GroupName="29"
+                            Content="USA"
+                            Checked="click29"/>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+              <!-- Hawaii 30 -->
+              <StackPanel x:Name="Hawaii300" Grid.Column="24" Grid.Row="8" Margin="20,20,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <StackPanel x:Name="Header30" Orientation="Vertical">
+                  <Image x:Name="iG30" Source="/Resources/Germany.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iJ30" Source="/Resources/Japan.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSA30" Source="/Resources/USA.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                  <Image x:Name="iUK30" Source="/Resources/UK.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSSR30" Source="/Resources/USSR.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <TextBlock Text="Hawaii (1)"></TextBlock>
+                </StackPanel>
+                <StackPanel x:Name="Axis30" Visibility="Visible">
+                  <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                            x:Name="G30"
+                            VerticalAlignment="Top"
+                            GroupName="30"
+                            Content="Germany"
+                            Checked="click30"/>
+                  </StackPanel>
+                  <StackPanel >
+                    <RadioButton
+                            VerticalAlignment="Top"
+                            x:Name="J30"
+                            GroupName="30"
+                            Content="Japan"
+                            Checked="click30"/>
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Allies30" Visibility="Collapsed">
+                  <StackPanel>
+                    <RadioButton
+                            x:Name="USA30"
+                            VerticalAlignment="Top"
+                            GroupName="30"
+                            Content="USA"
+                            Checked="click30"/>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+              <!-- Sinkiang 31 -->
+              <StackPanel x:Name="Sinkiang310" Grid.Column="15" Grid.Row="5" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <StackPanel x:Name="Header31" Orientation="Vertical">
+                  <Image x:Name="iG31" Source="/Resources/Germany.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iJ31" Source="/Resources/Japan.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSA31" Source="/Resources/USA.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                  <Image x:Name="iUK31" Source="/Resources/UK.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSSR31" Source="/Resources/USSR.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <TextBlock Text="Sinkiang (1)"></TextBlock>
+                </StackPanel>
+                <StackPanel x:Name="Axis31" Visibility="Visible">
+                  <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                            x:Name="G31"
+                            VerticalAlignment="Top"
+                            GroupName="31"
+                            Content="Germany"
+                            Checked="click31"/>
+                  </StackPanel>
+                  <StackPanel >
+                    <RadioButton
+                            VerticalAlignment="Top"
+                            x:Name="J31"
+                            GroupName="31"
+                            Content="Japan"
+                            Checked="click31"/>
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Allies31" Visibility="Collapsed">
+                  <StackPanel>
+                    <RadioButton
+                            x:Name="USA31"
+                            VerticalAlignment="Top"
+                            GroupName="31"
+                            Content="USA"
+                            Checked="click31"/>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
+              <!-- Central America 36 -->
                 <StackPanel x:Name="CentralAmerica360" Grid.Column="0" Grid.Row="8" Margin="0,0,30,0" Grid.ColumnSpan="2" HorizontalAlignment="Left">
                     <StackPanel x:Name="Header36" Orientation="Horizontal">
                         <TextBlock Text=" Central America (1)"></TextBlock>
