@@ -1176,6 +1176,46 @@
                   </StackPanel>
                 </StackPanel>
               </StackPanel>
+              
+                         <!-- Yunnan 32 -->
+              <StackPanel x:Name="Yunnan320" Grid.Column="16" Grid.Row="8" Margin="0,10,30,0" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <StackPanel x:Name="Header32" Orientation="Vertical">
+                  <Image x:Name="iG32" Source="/Resources/Germany.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iJ32" Source="/Resources/Japan.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSA32" Source="/Resources/USA.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                  <Image x:Name="iUK32" Source="/Resources/UK.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <Image x:Name="iUSSR32" Source="/Resources/USSR.png" Margin="0,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                  <TextBlock Text="Yunnan (1)"></TextBlock>
+                </StackPanel>
+                <StackPanel x:Name="Axis32" Visibility="Visible">
+                  <StackPanel Orientation="Horizontal">
+                    <RadioButton
+                            x:Name="G32"
+                            VerticalAlignment="Top"
+                            GroupName="32"
+                            Content="Germany"
+                            Checked="click32"/>
+                  </StackPanel>
+                  <StackPanel >
+                    <RadioButton
+                            VerticalAlignment="Top"
+                            x:Name="J32"
+                            GroupName="32"
+                            Content="Japan"
+                            Checked="click32"/>
+                  </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Allies32" Visibility="Collapsed">
+                  <StackPanel>
+                    <RadioButton
+                            x:Name="USA32"
+                            VerticalAlignment="Top"
+                            GroupName="32"
+                            Content="USA"
+                            Checked="click32"/>
+                  </StackPanel>
+                </StackPanel>
+              </StackPanel>
               <!-- Central America 36 -->
                 <StackPanel x:Name="CentralAmerica360" Grid.Column="0" Grid.Row="8" Margin="0,0,30,0" Grid.ColumnSpan="2" HorizontalAlignment="Left">
                     <StackPanel x:Name="Header36" Orientation="Horizontal">

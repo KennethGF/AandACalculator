@@ -1434,6 +1434,50 @@ namespace AxisAndAlliesCalculator
                 UpdateScreen();
             }
         }
+        private void click32(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "USA")
+                {
+                    Axis32.Visibility = Visibility.Collapsed;
+                    Allies32.Visibility = Visibility.Visible;
+                    iUSA32.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis32.Visibility = Visibility.Visible;
+                    Allies32.Visibility = Visibility.Collapsed;
+                    iUSA32.Visibility = Visibility.Visible;
+                    iG32.Visibility = Visibility.Collapsed;
+                    iJ32.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USA")
+                {
+                    iUSA32.Visibility = Visibility.Visible;
+                    iG32.Visibility = Visibility.Collapsed;
+                    iJ32.Visibility = Visibility.Collapsed;
+
+                }
+                if (owner == "Germany")
+                {
+                    iUSA32.Visibility = Visibility.Collapsed;
+                    iG32.Visibility = Visibility.Visible;
+                    iJ32.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iUSA32.Visibility = Visibility.Collapsed;
+                    iG32.Visibility = Visibility.Collapsed;
+                    iJ32.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
         private void click36(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = sender as RadioButton;
