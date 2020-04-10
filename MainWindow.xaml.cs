@@ -1226,6 +1226,60 @@ namespace AxisAndAlliesCalculator
                 UpdateScreen();
             }
         }
+        private void click18(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "Japan")
+                {
+                    Axis18.Visibility = Visibility.Visible;
+                    Allies18.Visibility = Visibility.Collapsed;
+                    iJ18.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis18.Visibility = Visibility.Collapsed;
+                    Allies18.Visibility = Visibility.Visible;
+                    iJ18.Visibility = Visibility.Visible;
+                    iUSA18.Visibility = Visibility.Collapsed;
+                    iUK18.Visibility = Visibility.Collapsed;
+                    iUSSR18.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iJ18.Visibility = Visibility.Visible;
+                    iUSA18.Visibility = Visibility.Collapsed;
+                    iUK18.Visibility = Visibility.Collapsed;
+                    iUSSR18.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USA")
+                {
+                    iJ18.Visibility = Visibility.Collapsed;
+                    iUSA18.Visibility = Visibility.Visible;
+                    iUK18.Visibility = Visibility.Collapsed;
+                    iUSSR18.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "UK")
+                {
+                    iJ18.Visibility = Visibility.Collapsed;
+                    iUSA18.Visibility = Visibility.Collapsed;
+                    iUK18.Visibility = Visibility.Visible;
+                    iUSSR18.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USSR")
+                {
+                    iJ18.Visibility = Visibility.Collapsed;
+                    iUSA18.Visibility = Visibility.Collapsed;
+                    iUK18.Visibility = Visibility.Collapsed;
+                    iUSSR18.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
         private void click26(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = sender as RadioButton;
