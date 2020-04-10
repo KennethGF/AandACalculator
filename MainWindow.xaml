@@ -943,6 +943,53 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
+              <!-- Manchuria 17 -->
+                  <StackPanel x:Name="Manchuria17" Grid.Column="18" Grid.Row="3" Margin="0,0,0,20" Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                    <StackPanel x:Name="Header17" Orientation="Horizontal" Margin="0,0,0,0">
+                        <TextBlock Text="Manchuria (3)"></TextBlock>
+                        <Image x:Name="iG17" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iJ17" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                        <Image x:Name="iUSA17" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUK17" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                        <Image x:Name="iUSSR17" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Axis17" Visibility="Collapsed">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
+                                    x:Name="J17"
+                                    VerticalAlignment="Top"                            
+                                    GroupName="17"                                 
+                                    Content="Japan"                   
+                                    Checked="click17"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel x:Name="Allies17" Visibility="Visible">
+                        <StackPanel>
+                            <RadioButton
+                                    x:Name="USA17"
+                                    VerticalAlignment="Top"
+                                    GroupName="17"
+                                    Content="USA"                        
+                                    Checked="click17"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <RadioButton
+                                    x:Name="UK17"
+                                    VerticalAlignment="Top"
+                                    GroupName="17"                             
+                                    Content="UK"
+                                    Checked="click17"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <RadioButton
+                                    x:Name="USSR17"
+                                    VerticalAlignment="Top"
+                                    GroupName="17"
+                                    Content="USSR"                              
+                                    Checked="click17"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
                 <!-- Eastern USA 26 -->
               <StackPanel x:Name="EasternUSA260" Grid.Column="1" Grid.Row="5" Margin="5,0,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Left">
                 <StackPanel x:Name="Header26" Orientation="Vertical">
