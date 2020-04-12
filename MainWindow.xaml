@@ -7,6 +7,12 @@
         xmlns:utils1="clr-namespace:AxisAndAlliesCalculator"
         Title="IPC Calculator, Spring 1942 - Second Edition" Topmost="False" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
+        <BitmapImage x:Key="Map" UriSource="Resources\AandAmap.png"></BitmapImage>
+        <BitmapImage x:Key="Germany" UriSource="Resources\Germany.png"></BitmapImage>
+        <BitmapImage x:Key="Japan" UriSource="Resources\Japan.png"></BitmapImage>
+        <BitmapImage x:Key="USA" UriSource="Resources\USA.png"></BitmapImage>
+        <BitmapImage x:Key="UK" UriSource="Resources\UK.png"></BitmapImage>
+        <BitmapImage x:Key="USSR" UriSource="Resources\USSR.png"></BitmapImage>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="Foreground" Value="BlanchedAlmond"/>
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -110,18 +116,18 @@
                     </Grid.RowDefinitions>
 
                     <Grid.Background>
-                        <ImageBrush ImageSource="/Resources/AandAmap.png" Stretch="Fill"/>
+                        <ImageBrush ImageSource="{StaticResource Map}" Stretch="Fill"/>
                     </Grid.Background>
 
                     <!-- Germany 0 -->
                     <StackPanel x:Name="Germany00" Grid.Column="7" Grid.Row="4" Margin="0,30,0,0" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
                         <StackPanel x:Name="Header0" Orientation="Horizontal" Margin="0,0,0,0">
                             <TextBlock Text="Germany (10)"></TextBlock>
-                            <Image x:Name="iG0" Source="/Resources/Germany.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
-                            <Image x:Name="iJ0" Source="/Resources/Japan.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                            <Image x:Name="iUSA0" Source="/Resources/USA.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                            <Image x:Name="iUK0" Source="/Resources/UK.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
-                            <Image x:Name="iUSSR0" Source="/Resources/USSR.png" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                            <Image x:Name="iG0" Source="{StaticResource Germany}" Margin="5,0,0,0" Width="20" Height="20" Visibility="Visible"/>
+                            <Image x:Name="iJ0" Source="{StaticResource Japan}" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                            <Image x:Name="iUSA0" Source="{StaticResource USA}" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                            <Image x:Name="iUK0" Source="{StaticResource UK}" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
+                            <Image x:Name="iUSSR0" Source="{StaticResource USSR}" Margin="5,0,0,0" Width="20" Height="20" Visibility="Collapsed"/>
                         </StackPanel>
                         <StackPanel x:Name="Axis0" Visibility="Collapsed">
                             <StackPanel Orientation="Horizontal">
