@@ -6,7 +6,6 @@
         mc:Ignorable="d"
         xmlns:utils1="clr-namespace:AxisAndAlliesCalculator"
         Title="IPC Calculator, Spring 1942 - Second Edition" Topmost="False" VerticalAlignment="Top" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <!--Height="1824" Width="2736"-->
     <Window.Resources>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="Foreground" Value="BlanchedAlmond"/>
@@ -54,11 +53,6 @@
         </Style>
     </Window.Resources>
     <Border Margin="0,0,0,0" ClipToBounds="True">
-        <!--<Border.LayoutTransform>
-            <TransformGroup>
-                <ScaleTransform ScaleX="1.0" ScaleY="1.0"/>
-            </TransformGroup>
-        </Border.LayoutTransform>-->
         <ScrollViewer
             HorizontalScrollBarVisibility="Visible"
             VerticalScrollBarVisibility="Auto"
@@ -66,8 +60,6 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"          
             Margin="0,0,0,0">
-            <!--Height="1070"
-            Width="1915"-->
             <utils1:ZoomBorder x:Name="border" ClipToBounds="True" Background="Gray">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
@@ -115,7 +107,6 @@
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
-                        <!--14-->
                     </Grid.RowDefinitions>
 
                     <Grid.Background>
