@@ -164,7 +164,7 @@ namespace AxisAndAlliesCalculator
 
             IsVisibleChanged += OnIsVisibleChanged;      
         }
-        public event MouseEventHandler MouseClick;
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string TotalPropetyName)
         {
@@ -183,15 +183,7 @@ namespace AxisAndAlliesCalculator
                 }
 
         }
-        private void btnCenter_Click(object sender, EventArgs e)
-        {
-            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
-            double windowWidth = this.Width;
-            double windowHeight = this.Height;
-            this.Left = (screenWidth / 2) - (windowWidth / 2);
-            this.Top = (screenHeight / 2) - (windowHeight / 2);
-        }
+
         #region Load Territories from List
         public void LoadBasicCountryListFromHDD(string filename)
         {

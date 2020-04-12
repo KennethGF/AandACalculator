@@ -1392,29 +1392,29 @@
                         <StackPanel x:Name="Axis26" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G26"
-                            VerticalAlignment="Top"
-                            GroupName="26"
-                            Content="Germany"
-                            Checked="click26"/>
+                                    x:Name="G26"
+                                    VerticalAlignment="Top"
+                                    GroupName="26"
+                                    Content="Germany"
+                                    Checked="click26"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J26"
-                            GroupName="26"
-                            Content="Japan"
-                            Checked="click26"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J26"
+                                    GroupName="26"
+                                    Content="Japan"
+                                    Checked="click26"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies26" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA26"
-                            VerticalAlignment="Top"
-                            GroupName="26"
-                            Content="USA"
-                            Checked="click26"/>
+                                    x:Name="USA26"
+                                    VerticalAlignment="Top"
+                                    GroupName="26"
+                                    Content="USA"
+                                    Checked="click26"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1432,29 +1432,29 @@
                         <StackPanel x:Name="Axis27" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G27"
-                            VerticalAlignment="Top"
-                            GroupName="27"
-                            Content="Germany"
-                            Checked="click27"/>
-                            </StackPanel>
+                                    x:Name="G27"
+                                    VerticalAlignment="Top"
+                                    GroupName="27"
+                                    Content="Germany"
+                                    Checked="click27"/>
+                                    </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J27"
-                            GroupName="27"
-                            Content="Japan"
-                            Checked="click27"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J27"
+                                    GroupName="27"
+                                    Content="Japan"
+                                    Checked="click27"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies27" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA27"
-                            VerticalAlignment="Top"
-                            GroupName="27"
-                            Content="USA"
-                            Checked="click27"/>
+                                    x:Name="USA27"
+                                    VerticalAlignment="Top"
+                                    GroupName="27"
+                                    Content="USA"
+                                    Checked="click27"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1471,29 +1471,29 @@
                         <StackPanel x:Name="Axis28" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G28"
-                            VerticalAlignment="Top"
-                            GroupName="28"
-                            Content="Germany"
-                            Checked="click28"/>
+                                    x:Name="G28"
+                                    VerticalAlignment="Top"
+                                    GroupName="28"
+                                    Content="Germany"
+                                    Checked="click28"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J28"
-                            GroupName="28"
-                            Content="Japan"
-                            Checked="click28"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J28"
+                                    GroupName="28"
+                                    Content="Japan"
+                                    Checked="click28"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies28" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA28"
-                            VerticalAlignment="Top"
-                            GroupName="28"
-                            Content="USA"
-                            Checked="click28"/>
+                                    x:Name="USA28"
+                                    VerticalAlignment="Top"
+                                    GroupName="28"
+                                    Content="USA"
+                                    Checked="click28"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1509,29 +1509,29 @@
                         <StackPanel x:Name="Axis29" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G29"
-                            VerticalAlignment="Top"
-                            GroupName="29"
-                            Content="Germany"
-                            Checked="click29"/>
+                                    x:Name="G29"
+                                    VerticalAlignment="Top"
+                                    GroupName="29"
+                                    Content="Germany"
+                                    Checked="click29"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J29"
-                            GroupName="29"
-                            Content="Japan"
-                            Checked="click29"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J29"
+                                    GroupName="29"
+                                    Content="Japan"
+                                    Checked="click29"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies29" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA29"
-                            VerticalAlignment="Top"
-                            GroupName="29"
-                            Content="USA"
-                            Checked="click29"/>
+                                    x:Name="USA29"
+                                    VerticalAlignment="Top"
+                                    GroupName="29"
+                                    Content="USA"
+                                    Checked="click29"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1548,29 +1548,29 @@
                         <StackPanel x:Name="Axis30" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G30"
-                            VerticalAlignment="Top"
-                            GroupName="30"
-                            Content="Germany"
-                            Checked="click30"/>
+                                    x:Name="G30"
+                                    VerticalAlignment="Top"
+                                    GroupName="30"
+                                    Content="Germany"
+                                    Checked="click30"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J30"
-                            GroupName="30"
-                            Content="Japan"
-                            Checked="click30"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J30"
+                                    GroupName="30"
+                                    Content="Japan"
+                                    Checked="click30"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies30" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA30"
-                            VerticalAlignment="Top"
-                            GroupName="30"
-                            Content="USA"
-                            Checked="click30"/>
+                                    x:Name="USA30"
+                                    VerticalAlignment="Top"
+                                    GroupName="30"
+                                    Content="USA"
+                                    Checked="click30"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1587,29 +1587,29 @@
                         <StackPanel x:Name="Axis31" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G31"
-                            VerticalAlignment="Top"
-                            GroupName="31"
-                            Content="Germany"
-                            Checked="click31"/>
+                                    x:Name="G31"
+                                    VerticalAlignment="Top"
+                                    GroupName="31"
+                                    Content="Germany"
+                                    Checked="click31"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J31"
-                            GroupName="31"
-                            Content="Japan"
-                            Checked="click31"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J31"
+                                    GroupName="31"
+                                    Content="Japan"
+                                    Checked="click31"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies31" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA31"
-                            VerticalAlignment="Top"
-                            GroupName="31"
-                            Content="USA"
-                            Checked="click31"/>
+                                    x:Name="USA31"
+                                    VerticalAlignment="Top"
+                                    GroupName="31"
+                                    Content="USA"
+                                    Checked="click31"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1626,29 +1626,29 @@
                         <StackPanel x:Name="Axis32" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G32"
-                            VerticalAlignment="Top"
-                            GroupName="32"
-                            Content="Germany"
-                            Checked="click32"/>
+                                    x:Name="G32"
+                                    VerticalAlignment="Top"
+                                    GroupName="32"
+                                    Content="Germany"
+                                    Checked="click32"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J32"
-                            GroupName="32"
-                            Content="Japan"
-                            Checked="click32"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J32"
+                                    GroupName="32"
+                                    Content="Japan"
+                                    Checked="click32"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies32" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA32"
-                            VerticalAlignment="Top"
-                            GroupName="32"
-                            Content="USA"
-                            Checked="click32"/>
+                                    x:Name="USA32"
+                                    VerticalAlignment="Top"
+                                    GroupName="32"
+                                    Content="USA"
+                                    Checked="click32"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1665,29 +1665,29 @@
                         <StackPanel x:Name="Axis33" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G33"
-                            VerticalAlignment="Top"
-                            GroupName="33"
-                            Content="Germany"
-                            Checked="click33"/>
+                                    x:Name="G33"
+                                    VerticalAlignment="Top"
+                                    GroupName="33"
+                                    Content="Germany"
+                                    Checked="click33"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J33"
-                            GroupName="33"
-                            Content="Japan"
-                            Checked="click33"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J33"
+                                    GroupName="33"
+                                    Content="Japan"
+                                    Checked="click33"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies33" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA33"
-                            VerticalAlignment="Top"
-                            GroupName="33"
-                            Content="USA"
-                            Checked="click33"/>
+                                    x:Name="USA33"
+                                    VerticalAlignment="Top"
+                                    GroupName="33"
+                                    Content="USA"
+                                    Checked="click33"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1704,29 +1704,29 @@
                         <StackPanel x:Name="Axis34" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G34"
-                            VerticalAlignment="Top"
-                            GroupName="34"
-                            Content="Germany"
-                            Checked="click34"/>
+                                    x:Name="G34"
+                                    VerticalAlignment="Top"
+                                    GroupName="34"
+                                    Content="Germany"
+                                    Checked="click34"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J34"
-                            GroupName="34"
-                            Content="Japan"
-                            Checked="click34"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J34"
+                                    GroupName="34"
+                                    Content="Japan"
+                                    Checked="click34"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies34" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA34"
-                            VerticalAlignment="Top"
-                            GroupName="34"
-                            Content="USA"
-                            Checked="click34"/>
+                                    x:Name="USA34"
+                                    VerticalAlignment="Top"
+                                    GroupName="34"
+                                    Content="USA"
+                                    Checked="click34"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1744,29 +1744,29 @@
                         <StackPanel x:Name="Axis35" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G35"
-                            VerticalAlignment="Top"
-                            GroupName="35"
-                            Content="Germany"
-                            Checked="click35"/>
+                                    x:Name="G35"
+                                    VerticalAlignment="Top"
+                                    GroupName="35"
+                                    Content="Germany"
+                                    Checked="click35"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J35"
-                            GroupName="35"
-                            Content="Japan"
-                            Checked="click35"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J35"
+                                    GroupName="35"
+                                    Content="Japan"
+                                    Checked="click35"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies35" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA35"
-                            VerticalAlignment="Top"
-                            GroupName="35"
-                            Content="USA"
-                            Checked="click35"/>
+                                    x:Name="USA35"
+                                    VerticalAlignment="Top"
+                                    GroupName="35"
+                                    Content="USA"
+                                    Checked="click35"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1783,29 +1783,29 @@
                         <StackPanel x:Name="Axis36" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G36"
-                            VerticalAlignment="Top"
-                            GroupName="36"
-                            Content="Germany"
-                            Checked="click36"/>
+                                    x:Name="G36"
+                                    VerticalAlignment="Top"
+                                    GroupName="36"
+                                    Content="Germany"
+                                    Checked="click36"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J36"
-                            GroupName="36"
-                            Content="Japan"
-                            Checked="click36"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J36"
+                                    GroupName="36"
+                                    Content="Japan"
+                                    Checked="click36"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies36" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA36"
-                            VerticalAlignment="Top"
-                            GroupName="36"
-                            Content="USA"
-                            Checked="click36"/>
+                                    x:Name="USA36"
+                                    VerticalAlignment="Top"
+                                    GroupName="36"
+                                    Content="USA"
+                                    Checked="click36"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1822,29 +1822,29 @@
                         <StackPanel x:Name="Axis37" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G37"
-                            VerticalAlignment="Top"
-                            GroupName="37"
-                            Content="Germany"
-                            Checked="click37"/>
+                                    x:Name="G37"
+                                    VerticalAlignment="Top"
+                                    GroupName="37"
+                                    Content="Germany"
+                                    Checked="click37"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J37"
-                            GroupName="37"
-                            Content="Japan"
-                            Checked="click37"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J37"
+                                    GroupName="37"
+                                    Content="Japan"
+                                    Checked="click37"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies37" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA37"
-                            VerticalAlignment="Top"
-                            GroupName="37"
-                            Content="USA"
-                            Checked="click37"/>
+                                    x:Name="USA37"
+                                    VerticalAlignment="Top"
+                                    GroupName="37"
+                                    Content="USA"
+                                    Checked="click37"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1861,29 +1861,29 @@
                         <StackPanel x:Name="Axis38" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                            x:Name="G38"
-                            VerticalAlignment="Top"
-                            GroupName="38"
-                            Content="Germany"
-                            Checked="click38"/>
+                                    x:Name="G38"
+                                    VerticalAlignment="Top"
+                                    GroupName="38"
+                                    Content="Germany"
+                                    Checked="click38"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                            VerticalAlignment="Top"
-                            x:Name="J38"
-                            GroupName="38"
-                            Content="Japan"
-                            Checked="click38"/>
+                                    VerticalAlignment="Top"
+                                    x:Name="J38"
+                                    GroupName="38"
+                                    Content="Japan"
+                                    Checked="click38"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies38" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                            x:Name="USA38"
-                            VerticalAlignment="Top"
-                            GroupName="38"
-                            Content="USA"
-                            Checked="click38"/>
+                                    x:Name="USA38"
+                                    VerticalAlignment="Top"
+                                    GroupName="38"
+                                    Content="USA"
+                                    Checked="click38"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1901,29 +1901,29 @@
                         <StackPanel x:Name="Axis39" Visibility="Visible" HorizontalAlignment="Center">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G39"
-                              VerticalAlignment="Top"
-                              GroupName="39"
-                              Content="Germany"
-                              Checked="click39"/>
+                                  x:Name="G39"
+                                  VerticalAlignment="Top"
+                                  GroupName="39"
+                                  Content="Germany"
+                                  Checked="click39"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J39"
-                              GroupName="39"
-                              Content="Japan"
-                              Checked="click39"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J39"
+                                  GroupName="39"
+                                  Content="Japan"
+                                  Checked="click39"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies39" Visibility="Collapsed" HorizontalAlignment="Center">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK39"
-                              VerticalAlignment="Top"
-                              GroupName="39"
-                              Content="UK"
-                              Checked="click39"/>
+                                  x:Name="UK39"
+                                  VerticalAlignment="Top"
+                                  GroupName="39"
+                                  Content="UK"
+                                  Checked="click39"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1941,29 +1941,29 @@
                         <StackPanel x:Name="Axis40" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G40"
-                              VerticalAlignment="Top"
-                              GroupName="40"
-                              Content="Germany"
-                              Checked="click40"/>
+                                  x:Name="G40"
+                                  VerticalAlignment="Top"
+                                  GroupName="40"
+                                  Content="Germany"
+                                  Checked="click40"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J40"
-                              GroupName="40"
-                              Content="Japan"
-                              Checked="click40"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J40"
+                                  GroupName="40"
+                                  Content="Japan"
+                                  Checked="click40"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies40" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK40"
-                              VerticalAlignment="Top"
-                              GroupName="40"
-                              Content="UK"
-                              Checked="click40"/>
+                                  x:Name="UK40"
+                                  VerticalAlignment="Top"
+                                  GroupName="40"
+                                  Content="UK"
+                                  Checked="click40"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -1980,30 +1980,30 @@
                         <StackPanel x:Name="Axis41" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G41"
-                              VerticalAlignment="Top"
-                              GroupName="41"
-                              Content="Germany"
-                              Checked="click41"/>
+                                  x:Name="G41"
+                                  VerticalAlignment="Top"
+                                  GroupName="41"
+                                  Content="Germany"
+                                  Checked="click41"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J41"
-                              GroupName="41"
-                              Content="Japan"
-                              Checked="click41"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J41"
+                                  GroupName="41"
+                                  Content="Japan"
+                                  Checked="click41"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies41" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK41"
-                              VerticalAlignment="Top"
-                              GroupName="41"
-                              Content="UK"
-                              Checked="click41"/>
-                            </StackPanel>
+                                  x:Name="UK41"
+                                  VerticalAlignment="Top"
+                                  GroupName="41"
+                                  Content="UK"
+                                  Checked="click41"/>
+                                </StackPanel>
                         </StackPanel>
                     </StackPanel>
                     <!-- Union of South Africa 42 -->
@@ -2019,29 +2019,29 @@
                         <StackPanel x:Name="Axis42" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G42"
-                              VerticalAlignment="Top"
-                              GroupName="42"
-                              Content="Germany"
-                              Checked="click42"/>
+                                  x:Name="G42"
+                                  VerticalAlignment="Top"
+                                  GroupName="42"
+                                  Content="Germany"
+                                  Checked="click42"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J42"
-                              GroupName="42"
-                              Content="Japan"
-                              Checked="click42"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J42"
+                                  GroupName="42"
+                                  Content="Japan"
+                                  Checked="click42"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies42" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK42"
-                              VerticalAlignment="Top"
-                              GroupName="42"
-                              Content="UK"
-                              Checked="click42"/>
+                                  x:Name="UK42"
+                                  VerticalAlignment="Top"
+                                  GroupName="42"
+                                  Content="UK"
+                                  Checked="click42"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2058,29 +2058,29 @@
                         <StackPanel x:Name="Axis43" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G43"
-                      VerticalAlignment="Top"
-                      GroupName="43"
-                      Content="Germany"
-                      Checked="click43"/>
+                                  x:Name="G43"
+                                  VerticalAlignment="Top"
+                                  GroupName="43"
+                                  Content="Germany"
+                                  Checked="click43"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J43"
-                      GroupName="43"
-                      Content="Japan"
-                      Checked="click43"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J43"
+                                  GroupName="43"
+                                  Content="Japan"
+                                  Checked="click43"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies43" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK43"
-                      VerticalAlignment="Top"
-                      GroupName="43"
-                      Content="UK"
-                      Checked="click43"/>
+                                  x:Name="UK43"
+                                  VerticalAlignment="Top"
+                                  GroupName="43"
+                                  Content="UK"
+                                  Checked="click43"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2097,29 +2097,29 @@
                         <StackPanel x:Name="Axis44" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G44"
-                      VerticalAlignment="Top"
-                      GroupName="44"
-                      Content="Germany"
-                      Checked="click44"/>
+                                  x:Name="G44"
+                                  VerticalAlignment="Top"
+                                  GroupName="44"
+                                  Content="Germany"
+                                  Checked="click44"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J44"
-                      GroupName="44"
-                      Content="Japan"
-                      Checked="click44"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J44"
+                                  GroupName="44"
+                                  Content="Japan"
+                                  Checked="click44"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies44" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK44"
-                      VerticalAlignment="Top"
-                      GroupName="44"
-                      Content="UK"
-                      Checked="click44"/>
+                                  x:Name="UK44"
+                                  VerticalAlignment="Top"
+                                  GroupName="44"
+                                  Content="UK"
+                                  Checked="click44"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2136,29 +2136,29 @@
                         <StackPanel x:Name="Axis45" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G45"
-                      VerticalAlignment="Top"
-                      GroupName="45"
-                      Content="Germany"
-                      Checked="click45"/>
+                                  x:Name="G45"
+                                  VerticalAlignment="Top"
+                                  GroupName="45"
+                                  Content="Germany"
+                                  Checked="click45"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J45"
-                      GroupName="45"
-                      Content="Japan"
-                      Checked="click45"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J45"
+                                  GroupName="45"
+                                  Content="Japan"
+                                  Checked="click45"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies45" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK45"
-                      VerticalAlignment="Top"
-                      GroupName="45"
-                      Content="UK"
-                      Checked="click45"/>
+                                  x:Name="UK45"
+                                  VerticalAlignment="Top"
+                                  GroupName="45"
+                                  Content="UK"
+                                  Checked="click45"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2175,29 +2175,29 @@
                         <StackPanel x:Name="Axis46" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G46"
-                      VerticalAlignment="Top"
-                      GroupName="46"
-                      Content="Germany"
-                      Checked="click46"/>
+                                  x:Name="G46"
+                                  VerticalAlignment="Top"
+                                  GroupName="46"
+                                  Content="Germany"
+                                  Checked="click46"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J46"
-                      GroupName="46"
-                      Content="Japan"
-                      Checked="click46"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J46"
+                                  GroupName="46"
+                                  Content="Japan"
+                                  Checked="click46"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies46" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK46"
-                      VerticalAlignment="Top"
-                      GroupName="46"
-                      Content="UK"
-                      Checked="click46"/>
+                                  x:Name="UK46"
+                                  VerticalAlignment="Top"
+                                  GroupName="46"
+                                  Content="UK"
+                                  Checked="click46"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2214,29 +2214,29 @@
                         <StackPanel x:Name="Axis47" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G47"
-                      VerticalAlignment="Top"
-                      GroupName="47"
-                      Content="Germany"
-                      Checked="click47"/>
+                                  x:Name="G47"
+                                  VerticalAlignment="Top"
+                                  GroupName="47"
+                                  Content="Germany"
+                                  Checked="click47"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J47"
-                      GroupName="47"
-                      Content="Japan"
-                      Checked="click47"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J47"
+                                  GroupName="47"
+                                  Content="Japan"
+                                  Checked="click47"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies47" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK47"
-                      VerticalAlignment="Top"
-                      GroupName="47"
-                      Content="UK"
-                      Checked="click47"/>
+                                  x:Name="UK47"
+                                  VerticalAlignment="Top"
+                                  GroupName="47"
+                                  Content="UK"
+                                  Checked="click47"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2253,29 +2253,29 @@
                         <StackPanel x:Name="Axis48" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G48"
-                      VerticalAlignment="Top"
-                      GroupName="48"
-                      Content="Germany"
-                      Checked="click48"/>
+                                  x:Name="G48"
+                                  VerticalAlignment="Top"
+                                  GroupName="48"
+                                  Content="Germany"
+                                  Checked="click48"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J48"
-                      GroupName="48"
-                      Content="Japan"
-                      Checked="click48"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J48"
+                                  GroupName="48"
+                                  Content="Japan"
+                                  Checked="click48"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies48" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK48"
-                      VerticalAlignment="Top"
-                      GroupName="48"
-                      Content="UK"
-                      Checked="click48"/>
+                                  x:Name="UK48"
+                                  VerticalAlignment="Top"
+                                  GroupName="48"
+                                  Content="UK"
+                                  Checked="click48"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2292,29 +2292,29 @@
                         <StackPanel x:Name="Axis49" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                      x:Name="G49"
-                      VerticalAlignment="Top"
-                      GroupName="49"
-                      Content="Germany"
-                      Checked="click49"/>
+                                  x:Name="G49"
+                                  VerticalAlignment="Top"
+                                  GroupName="49"
+                                  Content="Germany"
+                                  Checked="click49"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                      VerticalAlignment="Top"
-                      x:Name="J49"
-                      GroupName="49"
-                      Content="Japan"
-                      Checked="click49"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J49"
+                                  GroupName="49"
+                                  Content="Japan"
+                                  Checked="click49"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies49" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                      x:Name="UK49"
-                      VerticalAlignment="Top"
-                      GroupName="49"
-                      Content="UK"
-                      Checked="click49"/>
+                                  x:Name="UK49"
+                                  VerticalAlignment="Top"
+                                  GroupName="49"
+                                  Content="UK"
+                                  Checked="click49"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2331,29 +2331,29 @@
                         <StackPanel x:Name="Axis50" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G50"
-                              VerticalAlignment="Top"
-                              GroupName="50"
-                              Content="Germany"
-                              Checked="click50"/>
+                                  x:Name="G50"
+                                  VerticalAlignment="Top"
+                                  GroupName="50"
+                                  Content="Germany"
+                                  Checked="click50"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J50"
-                              GroupName="50"
-                              Content="Japan"
-                              Checked="click50"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J50"
+                                  GroupName="50"
+                                  Content="Japan"
+                                  Checked="click50"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies50" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK50"
-                              VerticalAlignment="Top"
-                              GroupName="50"
-                              Content="UK"
-                              Checked="click50"/>
+                                  x:Name="UK50"
+                                  VerticalAlignment="Top"
+                                  GroupName="50"
+                                  Content="UK"
+                                  Checked="click50"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2370,29 +2370,29 @@
                         <StackPanel x:Name="Axis51" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G51"
-                              VerticalAlignment="Top"
-                              GroupName="51"
-                              Content="Germany"
-                              Checked="click51"/>
+                                  x:Name="G51"
+                                  VerticalAlignment="Top"
+                                  GroupName="51"
+                                  Content="Germany"
+                                  Checked="click51"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J51"
-                              GroupName="51"
-                              Content="Japan"
-                              Checked="click51"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J51"
+                                  GroupName="51"
+                                  Content="Japan"
+                                  Checked="click51"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies51" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK51"
-                              VerticalAlignment="Top"
-                              GroupName="51"
-                              Content="UK"
-                              Checked="click51"/>
+                                  x:Name="UK51"
+                                  VerticalAlignment="Top"
+                                  GroupName="51"
+                                  Content="UK"
+                                  Checked="click51"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2411,29 +2411,29 @@
                         <StackPanel x:Name="Axis52" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G52"
-                              VerticalAlignment="Top"
-                              GroupName="52"
-                              Content="Germany"
-                              Checked="click52"/>
+                                  x:Name="G52"
+                                  VerticalAlignment="Top"
+                                  GroupName="52"
+                                  Content="Germany"
+                                  Checked="click52"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J52"
-                              GroupName="52"
-                              Content="Japan"
-                              Checked="click52"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J52"
+                                  GroupName="52"
+                                  Content="Japan"
+                                  Checked="click52"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies52" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK52"
-                              VerticalAlignment="Top"
-                              GroupName="52"
-                              Content="UK"
-                              Checked="click52"/>
+                                  x:Name="UK52"
+                                  VerticalAlignment="Top"
+                                  GroupName="52"
+                                  Content="UK"
+                                  Checked="click52"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2450,29 +2450,29 @@
                         <StackPanel x:Name="Axis53" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G53"
-                              VerticalAlignment="Top"
-                              GroupName="53"
-                              Content="Germany"
-                              Checked="click53"/>
+                                  x:Name="G53"
+                                  VerticalAlignment="Top"
+                                  GroupName="53"
+                                  Content="Germany"
+                                  Checked="click53"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J53"
-                              GroupName="53"
-                              Content="Japan"
-                              Checked="click53"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J53"
+                                  GroupName="53"
+                                  Content="Japan"
+                                  Checked="click53"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies53" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK53"
-                              VerticalAlignment="Top"
-                              GroupName="53"
-                              Content="UK"
-                              Checked="click53"/>
+                                  x:Name="UK53"
+                                  VerticalAlignment="Top"
+                                  GroupName="53"
+                                  Content="UK"
+                                  Checked="click53"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2489,29 +2489,29 @@
                         <StackPanel x:Name="Axis54" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G54"
-                              VerticalAlignment="Top"
-                              GroupName="54"
-                              Content="Germany"
-                              Checked="click54"/>
+                                  x:Name="G54"
+                                  VerticalAlignment="Top"
+                                  GroupName="54"
+                                  Content="Germany"
+                                  Checked="click54"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J54"
-                              GroupName="54"
-                              Content="Japan"
-                              Checked="click54"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J54"
+                                  GroupName="54"
+                                  Content="Japan"
+                                  Checked="click54"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies54" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK54"
-                              VerticalAlignment="Top"
-                              GroupName="54"
-                              Content="UK"
-                              Checked="click54"/>
+                                  x:Name="UK54"
+                                  VerticalAlignment="Top"
+                                  GroupName="54"
+                                  Content="UK"
+                                  Checked="click54"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2528,29 +2528,29 @@
                         <StackPanel x:Name="Axis55" Visibility="Visible">
                             <StackPanel Orientation="Horizontal">
                                 <RadioButton
-                              x:Name="G55"
-                              VerticalAlignment="Top"
-                              GroupName="55"
-                              Content="Germany"
-                              Checked="click55"/>
+                                  x:Name="G55"
+                                  VerticalAlignment="Top"
+                                  GroupName="55"
+                                  Content="Germany"
+                                  Checked="click55"/>
                             </StackPanel>
                             <StackPanel >
                                 <RadioButton
-                              VerticalAlignment="Top"
-                              x:Name="J55"
-                              GroupName="55"
-                              Content="Japan"
-                              Checked="click55"/>
+                                  VerticalAlignment="Top"
+                                  x:Name="J55"
+                                  GroupName="55"
+                                  Content="Japan"
+                                  Checked="click55"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel x:Name="Allies55" Visibility="Collapsed">
                             <StackPanel>
                                 <RadioButton
-                              x:Name="UK55"
-                              VerticalAlignment="Top"
-                              GroupName="55"
-                              Content="UK"
-                              Checked="click55"/>
+                                  x:Name="UK55"
+                                  VerticalAlignment="Top"
+                                  GroupName="55"
+                                  Content="UK"
+                                  Checked="click55"/>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -2983,35 +2983,47 @@
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
-
+                    
+                    <!-- hint -->
+                    <StackPanel Orientation="Vertical" Grid.Column="4" Grid.Row="1" Margin="0,10,0,0" Grid.RowSpan="2" Grid.ColumnSpan="3" VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <TextBlock Text="Right click the map to recenter" FontSize="14" Foreground="Red" />
+                        <TextBlock Text="after mouse wheel zoom or drag" FontSize="14" Foreground="Red" />
+                    </StackPanel>
+                    
                     <!-- Totals -->
-                    <StackPanel x:Name="Totals" Grid.Column="3" Grid.Row="12" Margin="10" Grid.ColumnSpan="4" Grid.RowSpan="3">
+                    <StackPanel x:Name="Totals" Grid.Column="3" Grid.Row="11" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Total IPC for Germany = " FontSize="18"/>
-                            <TextBlock Text="{Binding Path=GermanyTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                            <TextBlock Text=" Total IPC for Germany = " FontSize="18"/>
+                            <TextBlock Text="{Binding Path=GermanyTotal, Mode=OneWay}" FontSize="18" Foreground="DarkGray" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Total IPC for Japan = " FontSize="18"/>
-                            <TextBlock Text="{Binding Path=JapanTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                            <TextBlock Text=" Total IPC for Japan = " FontSize="18"/>
+                            <TextBlock Text="{Binding Path=JapanTotal, Mode=OneWay}" FontSize="18" Foreground="OrangeRed"/>
+                            <TextBlock Text="     " FontSize="18"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Total IPC for the USA = " FontSize="18"/>
-                            <TextBlock Text="{Binding Path=USATotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                            <TextBlock Text=" Total IPC for the USA = " FontSize="18"/>
+                            <TextBlock Text="{Binding Path=USATotal, Mode=OneWay}" FontSize="18" Foreground="ForestGreen"/>
+                            <TextBlock Text=" " FontSize="18"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Total IPC for the UK = " FontSize="18"/>
-                            <TextBlock Text="{Binding Path=UKTotal, Mode=OneWay}" FontSize="18" Foreground="White"/>
+                            <TextBlock Text=" Total IPC for the UK = " FontSize="18"/>
+                            <TextBlock Text="{Binding Path=UKTotal, Mode=OneWay}" FontSize="18" Foreground="DarkGoldenrod"/>
+                            <TextBlock Text="    " FontSize="18"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Total IPC for the USSR = " FontSize="18"/>
-                            <TextBlock Text="{Binding Path=USSRTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
+                            <TextBlock Text=" Total IPC for the USSR = " FontSize="18"/>
+                            <TextBlock Text="  " FontSize="18"/>
+                            <TextBlock Text="{Binding Path=USSRTotal, Mode=OneWay }" FontSize="18" Foreground="Red"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Text="-----------------------------" FontSize="16" Foreground="Beige"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Total IPC for Game = " FontSize="18"/>
-                            <TextBlock Text="{Binding Path=GameTotal, Mode=OneWay }" FontSize="18" Foreground="White"/>
+                            <TextBlock Text=" Total IPC for Game = " FontSize="16" Foreground="FloralWhite"/>
+                            <TextBlock Text="{Binding Path=GameTotal, Mode=OneWay }" FontSize="18" Foreground="FloralWhite"/>
                         </StackPanel>
                     </StackPanel>
-                    <Button x:Name="btnCenter" MouseDoubleClick="btnCenter_Click" Grid.ColumnSpan="3" Content="Double Click ReCenter" Grid.Column="4" HorizontalAlignment="Left" Margin="10,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150"/>
                 </Grid>
             </utils1:ZoomBorder>
         </ScrollViewer>

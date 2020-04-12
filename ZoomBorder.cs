@@ -52,6 +52,7 @@ namespace AxisAndAlliesCalculator
                 child.RenderTransform = group;
                 child.RenderTransformOrigin = new Point(0.0, 0.0);
                 MouseWheel += child_MouseWheel;
+                MouseRightButtonDown += child_MouseLeftButtonDoubleClick;
                 MouseLeftButtonDown += child_MouseLeftButtonDown;
                 this.MouseLeftButtonUp += child_MouseLeftButtonUp;
                 this.MouseMove += child_MouseMove;
@@ -103,7 +104,10 @@ namespace AxisAndAlliesCalculator
                 tt.Y = abosuluteY - relative.Y * st.ScaleY;
             }
         }
-
+        private void child_MouseLeftButtonDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            this.Reset();
+        }
         private void child_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (child != null)
