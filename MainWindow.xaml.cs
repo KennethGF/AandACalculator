@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.IO;
+using System.Windows.Input;
 
 namespace AxisAndAlliesCalculator
 {
@@ -158,13 +159,12 @@ namespace AxisAndAlliesCalculator
             this.Height = SystemParameters.PrimaryScreenHeight;
             InitializeComponent();
 
-            //this.DataContext = new SimpleViewModel();
             this.HorizontalAlignment = HorizontalAlignment.Center;
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             IsVisibleChanged += OnIsVisibleChanged;      
         }
-
+        public event MouseEventHandler MouseClick;
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string TotalPropetyName)
         {
@@ -183,7 +183,15 @@ namespace AxisAndAlliesCalculator
                 }
 
         }
-
+        private void btnCenter_Click(object sender, EventArgs e)
+        {
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double windowWidth = this.Width;
+            double windowHeight = this.Height;
+            this.Left = (screenWidth / 2) - (windowWidth / 2);
+            this.Top = (screenHeight / 2) - (windowHeight / 2);
+        }
         #region Load Territories from List
         public void LoadBasicCountryListFromHDD(string filename)
         {
@@ -1492,6 +1500,168 @@ namespace AxisAndAlliesCalculator
                     iUSA22.Visibility = Visibility.Collapsed;
                     iUK22.Visibility = Visibility.Collapsed;
                     iUSSR22.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
+        private void click23(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "Japan")
+                {
+                    Axis23.Visibility = Visibility.Visible;
+                    Allies23.Visibility = Visibility.Collapsed;
+                    iJ23.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis23.Visibility = Visibility.Collapsed;
+                    Allies23.Visibility = Visibility.Visible;
+                    iJ23.Visibility = Visibility.Visible;
+                    iUSA23.Visibility = Visibility.Collapsed;
+                    iUK23.Visibility = Visibility.Collapsed;
+                    iUSSR23.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iJ23.Visibility = Visibility.Visible;
+                    iUSA23.Visibility = Visibility.Collapsed;
+                    iUK23.Visibility = Visibility.Collapsed;
+                    iUSSR23.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USA")
+                {
+                    iJ23.Visibility = Visibility.Collapsed;
+                    iUSA23.Visibility = Visibility.Visible;
+                    iUK23.Visibility = Visibility.Collapsed;
+                    iUSSR23.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "UK")
+                {
+                    iJ23.Visibility = Visibility.Collapsed;
+                    iUSA23.Visibility = Visibility.Collapsed;
+                    iUK23.Visibility = Visibility.Visible;
+                    iUSSR23.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USSR")
+                {
+                    iJ23.Visibility = Visibility.Collapsed;
+                    iUSA23.Visibility = Visibility.Collapsed;
+                    iUK23.Visibility = Visibility.Collapsed;
+                    iUSSR23.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
+        private void click24(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "Japan")
+                {
+                    Axis24.Visibility = Visibility.Visible;
+                    Allies24.Visibility = Visibility.Collapsed;
+                    iJ24.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis24.Visibility = Visibility.Collapsed;
+                    Allies24.Visibility = Visibility.Visible;
+                    iJ24.Visibility = Visibility.Visible;
+                    iUSA24.Visibility = Visibility.Collapsed;
+                    iUK24.Visibility = Visibility.Collapsed;
+                    iUSSR24.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iJ24.Visibility = Visibility.Visible;
+                    iUSA24.Visibility = Visibility.Collapsed;
+                    iUK24.Visibility = Visibility.Collapsed;
+                    iUSSR24.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USA")
+                {
+                    iJ24.Visibility = Visibility.Collapsed;
+                    iUSA24.Visibility = Visibility.Visible;
+                    iUK24.Visibility = Visibility.Collapsed;
+                    iUSSR24.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "UK")
+                {
+                    iJ24.Visibility = Visibility.Collapsed;
+                    iUSA24.Visibility = Visibility.Collapsed;
+                    iUK24.Visibility = Visibility.Visible;
+                    iUSSR24.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USSR")
+                {
+                    iJ24.Visibility = Visibility.Collapsed;
+                    iUSA24.Visibility = Visibility.Collapsed;
+                    iUK24.Visibility = Visibility.Collapsed;
+                    iUSSR24.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
+        private void click25(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "Japan")
+                {
+                    Axis25.Visibility = Visibility.Visible;
+                    Allies25.Visibility = Visibility.Collapsed;
+                    iJ25.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis25.Visibility = Visibility.Collapsed;
+                    Allies25.Visibility = Visibility.Visible;
+                    iJ25.Visibility = Visibility.Visible;
+                    iUSA25.Visibility = Visibility.Collapsed;
+                    iUK25.Visibility = Visibility.Collapsed;
+                    iUSSR25.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iJ25.Visibility = Visibility.Visible;
+                    iUSA25.Visibility = Visibility.Collapsed;
+                    iUK25.Visibility = Visibility.Collapsed;
+                    iUSSR25.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USA")
+                {
+                    iJ25.Visibility = Visibility.Collapsed;
+                    iUSA25.Visibility = Visibility.Visible;
+                    iUK25.Visibility = Visibility.Collapsed;
+                    iUSSR25.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "UK")
+                {
+                    iJ25.Visibility = Visibility.Collapsed;
+                    iUSA25.Visibility = Visibility.Collapsed;
+                    iUK25.Visibility = Visibility.Visible;
+                    iUSSR25.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USSR")
+                {
+                    iJ25.Visibility = Visibility.Collapsed;
+                    iUSA25.Visibility = Visibility.Collapsed;
+                    iUK25.Visibility = Visibility.Collapsed;
+                    iUSSR25.Visibility = Visibility.Visible;
                 }
                 UpdateScreen();
             }
@@ -2816,6 +2986,50 @@ namespace AxisAndAlliesCalculator
                 UpdateScreen();
             }
         }
+        private void click56(object sender, RoutedEventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            if (radioButton != null)
+            {
+                var owner = (string)radioButton.Content;
+                string territory = GetTerritory((string)radioButton.GroupName);
+                ChangeOwner(owner, territory); // button group name as string of int to territory name
+                if (owner != "USSR")
+                {
+                    Axis56.Visibility = Visibility.Collapsed;
+                    Allies56.Visibility = Visibility.Visible;
+                    iUSSR56.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    Axis56.Visibility = Visibility.Visible;
+                    Allies56.Visibility = Visibility.Collapsed;
+                    iUSSR56.Visibility = Visibility.Visible;
+                    iG56.Visibility = Visibility.Collapsed;
+                    iJ56.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "USSR")
+                {
+                    iUSSR56.Visibility = Visibility.Visible;
+                    iG56.Visibility = Visibility.Collapsed;
+                    iJ56.Visibility = Visibility.Collapsed;
+
+                }
+                if (owner == "Germany")
+                {
+                    iUSSR56.Visibility = Visibility.Collapsed;
+                    iG56.Visibility = Visibility.Visible;
+                    iJ56.Visibility = Visibility.Collapsed;
+                }
+                if (owner == "Japan")
+                {
+                    iUSSR56.Visibility = Visibility.Collapsed;
+                    iG56.Visibility = Visibility.Collapsed;
+                    iJ56.Visibility = Visibility.Visible;
+                }
+                UpdateScreen();
+            }
+        }
         private void click57(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = sender as RadioButton;
@@ -3252,50 +3466,6 @@ namespace AxisAndAlliesCalculator
                     iUSSR66.Visibility = Visibility.Collapsed;
                     iG66.Visibility = Visibility.Collapsed;
                     iJ66.Visibility = Visibility.Visible;
-                }
-                UpdateScreen();
-            }
-        }
-        private void click67(object sender, RoutedEventArgs e)
-        {
-            RadioButton radioButton = sender as RadioButton;
-            if (radioButton != null)
-            {
-                var owner = (string)radioButton.Content;
-                string territory = GetTerritory((string)radioButton.GroupName);
-                ChangeOwner(owner, territory); // button group name as string of int to territory name
-                if (owner != "USSR")
-                {
-                    Axis67.Visibility = Visibility.Collapsed;
-                    Allies67.Visibility = Visibility.Visible;
-                    iUSSR67.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    Axis67.Visibility = Visibility.Visible;
-                    Allies67.Visibility = Visibility.Collapsed;
-                    iUSSR67.Visibility = Visibility.Visible;
-                    iG67.Visibility = Visibility.Collapsed;
-                    iJ67.Visibility = Visibility.Collapsed;
-                }
-                if (owner == "USSR")
-                {
-                    iUSSR67.Visibility = Visibility.Visible;
-                    iG67.Visibility = Visibility.Collapsed;
-                    iJ67.Visibility = Visibility.Collapsed;
-
-                }
-                if (owner == "Germany")
-                {
-                    iUSSR67.Visibility = Visibility.Collapsed;
-                    iG67.Visibility = Visibility.Visible;
-                    iJ67.Visibility = Visibility.Collapsed;
-                }
-                if (owner == "Japan")
-                {
-                    iUSSR67.Visibility = Visibility.Collapsed;
-                    iG67.Visibility = Visibility.Collapsed;
-                    iJ67.Visibility = Visibility.Visible;
                 }
                 UpdateScreen();
             }
