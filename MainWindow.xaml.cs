@@ -150,7 +150,7 @@ namespace AxisAndAlliesCalculator
         {
             DataContext = this;
             string _path = "C:/user";
-            _path = Environment.CurrentDirectory;
+            _path = Environment.CurrentDirectory + "/Resources";
             string filename = "\\BasicCountryList.txt";
 
             LoadBasicCountryListFromHDD(_path + filename);

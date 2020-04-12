@@ -196,9 +196,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BasicCountryList.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Resources\BasicCountryList.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
