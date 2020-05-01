@@ -69,6 +69,7 @@ namespace AxisAndAlliesCalculator
             }
             set
             { 
+                if (_germanyTotal != value)
                     _germanyTotal = value;
             }
 
@@ -177,8 +178,7 @@ namespace AxisAndAlliesCalculator
 
             if (rb != null)
                 if (IsVisible)
-                {
-                    //rb.Visibility = Visibility.Collapsed;               
+                {              
                     int num = Int32.Parse(rb.GroupName);
                 }
 
