@@ -3021,6 +3021,31 @@
                             <TextBlock Text="{Binding Path=GameTotal, Mode=OneWay }" FontSize="18" Foreground="FloralWhite"/>
                         </StackPanel>
                     </StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="11" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock x:Name="GermanyZero" Text=" Total IPC for Germany = 0 ! !" FontSize="18" Background="Black" Opacity="1" Visibility="Hidden"/>
+                    <!--</StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="11" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" >-->
+                        <!--<TextBlock Text="" FontSize="18" Opacity="0"/>-->
+                        <TextBlock x:Name="JapanZero" Text=" Total IPC for Japan = 0 ! !" FontSize="18" Background="Black" Opacity="1" Visibility="Hidden"/>
+                    <!--</StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="11" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" >-->
+                        <!--<TextBlock Text="" FontSize="18" Opacity="0" />
+                        <TextBlock Text="" FontSize="18" Opacity="0"/>-->
+                        <TextBlock x:Name="USAZero" Text=" Total IPC for USA = 0 ! !" FontSize="18" Background="Black" Opacity="1" Visibility="Hidden"/>
+                    <!--</StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="11" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" >-->
+                        <!--<TextBlock Text="" FontSize="18" Opacity="0"/>
+                        <TextBlock Text="" FontSize="18" Opacity="0"/>
+                        <TextBlock Text="" FontSize="18" Opacity="0"/>-->
+                        <TextBlock x:Name="UKZero" Text=" Total IPC for UK = 0 ! !" FontSize="18" Background="Black" Opacity="1" Visibility="Hidden"/>
+                    <!--</StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="11" Margin="0,20,0,0" Grid.ColumnSpan="4" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" >-->
+                        <!--<TextBlock Text="" FontSize="18" Opacity="0"/>
+                        <TextBlock Text="" FontSize="18" Opacity="0"/>
+                        <TextBlock Text="" FontSize="18" Opacity="0"/>
+                        <TextBlock Text="" FontSize="18" Opacity="0"/>-->
+                        <TextBlock x:Name="USSRZero" Text=" Total IPC for USSR = 0 ! !" FontSize="18" Background="Black" Opacity="1" Visibility="Hidden"/>
+                    </StackPanel>
                 </Grid>
             </utils1:ZoomBorder>
         </ScrollViewer>

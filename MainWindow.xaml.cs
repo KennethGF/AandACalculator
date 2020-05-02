@@ -232,6 +232,28 @@ namespace AxisAndAlliesCalculator
             OnPropertyChanged("USSRTotal");
             _gameTotal = GameDataList.Select(s => s.IPC).ToList().Sum();
             OnPropertyChanged("GameTotal");
+
+            bool GermanyCapital = GameDataList.Where(s => s.TERRITORY == "Germany" && s.OWNER == "Germany").Any();
+            if (!GermanyCapital)
+                GermanyZero.Visibility = Visibility.Visible;
+            else GermanyZero.Visibility = Visibility.Hidden;
+            bool JapanCapital = GameDataList.Where(s => s.TERRITORY == "Japan" && s.OWNER == "Japan").Any();
+            if (!JapanCapital)
+                JapanZero.Visibility = Visibility.Visible;
+            else JapanZero.Visibility = Visibility.Hidden;
+            bool USACapital = GameDataList.Where(s => s.TERRITORY == "EasternUSA" && s.OWNER == "USA").Any();
+            if (!USACapital)
+                USAZero.Visibility = Visibility.Visible;
+            else USAZero.Visibility = Visibility.Hidden;
+            bool UKCapital = GameDataList.Where(s => s.TERRITORY == "UnitedKingdom" && s.OWNER == "UK").Any();
+            if (!UKCapital)
+                UKZero.Visibility = Visibility.Visible;
+            else UKZero.Visibility = Visibility.Hidden;
+            bool USSRCapital = GameDataList.Where(s => s.TERRITORY == "Russia" && s.OWNER == "USSR").Any();
+            if (!USSRCapital)
+                USSRZero.Visibility = Visibility.Visible;
+            else USSRZero.Visibility = Visibility.Hidden;
+
         }
         public void ChangeOwner(string nowOwning, string territory) // radio button group name sending name of Territory
         {
